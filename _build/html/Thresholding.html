@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thresholding &mdash; AtlasXbrowser Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AtlasXbrowser Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Thresholding</a><ul>
+<li><a class="reference internal" href="#tuning-parameters">Tuning Parameters</a></li>
+<li><a class="reference internal" href="#thresholding-examples">Thresholding Examples</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AtlasXbrowser Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Thresholding</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Thresholding.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="thresholding">
+<h1>Thresholding<a class="headerlink" href="#thresholding" title="Permalink to this headline"></a></h1>
+<p>In order to determine purely from the image, which regions correspond to biological tissue and which do not
+we use adaptive thresholding to convert each pixel to either be black or white. From there we can make infrences, based
+on the number of black vs. white pixels as to whether a given region on the screen is ontop of tissue, or not.</p>
+<p>To understand this process it is useful to remember that a digital image is a essentially a grid of pixels, each taking on
+a discrete color. Each pixel can take on one of <span class="math notranslate nohighlight">\(2^8\)</span> different possibilites, with values from 0 to 255. Where a pixel
+of value 0 is black, and 255 is white. In this step we take the image, with pixels each ranging in intensity from values 0 to 255, and
+convert that image into one where each pixel either has the value of 0 or 255.</p>
+<p>This is all done under the assumption that parts of the image corresponding to biological tissue will be darker than the rest of the
+slide, so in an ideal outcome, all biological tissue is designated as black and everything else is classifed as white.</p>
+<section id="tuning-parameters">
+<h2>Tuning Parameters<a class="headerlink" href="#tuning-parameters" title="Permalink to this headline"></a></h2>
+<ol class="arabic">
+<li><p>Navigate to the <strong>Adaptive Thresholding</strong> tab on the right side of the screen and select <strong>Activate.</strong></p></li>
+<li><p>Slide the <strong>BlockSize</strong> slider and <strong>C</strong> slider to find the optimal gradient between the sections of the images corresponding to tissue and those not. Use the examples below as a guide for this process.</p>
+<ul>
+<li><p>The BlockSize and C parameters are used to calculate the local pixel intensity threshold which divides pixels to be turned black to those turned white.</p></li>
+<li><p>This threshold, T, is calculated by <span class="math notranslate nohighlight">\(T = mean(I_L) - C\)</span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I_L\)</span> refers to the local region of the image being observed, with the size of this region determined by the <strong>BlockSize</strong> variable described below.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>BlockSize:</strong> How many pixels taken into account when calculating threshold value for a given region.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A Blocksize too large takes into account too much of the image, and when factors such as lighting are non-uniform, this can produce non optimal results.</p></li>
+<li><p>Blocksize too small does not take enough of the image into account and so the threshold value are somewhat “overfit” to the region.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>C</strong> is a constant subtracted from this local mean regulating how far above or below the mean a pixel must be to recieve a white classification.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Larger values of C directly decrease the threshold value, meaning more pixels will be above this value, and thus more pixels will be classified as white. As such, a C value too large, runs the risk of making the image too light, resulting in the classification of tissue as non-tissue.</p></li>
+<li><p>Conversely, smaller values of C cause a smaller proportion of the pixels to be above this threshold, leading to many pixels being designated as black. As such, a C value too small runs the risk of misclassifying off tissue sites as on tissue.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p>Once the gradient of the image is configured as desired, select the <em>Confirm</em> button within the <em>Adaptive Thresholding</em> tab.</p></li>
+</ol>
+</section>
+<section id="thresholding-examples">
+<h2>Thresholding Examples<a class="headerlink" href="#thresholding-examples" title="Permalink to this headline"></a></h2>
+<figure class="align-default" id="id1">
+<img alt="_images/darkthreshold_D223.png" src="_images/darkthreshold_D223.png" />
+<figcaption>
+<p><span class="caption-text">This is an example of too many of the pixels being classified as black, which leads to off tissue sites being designated as on tissue sites.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="_images/lightthreshold_D223.png" src="_images/lightthreshold_D223.png" />
+<figcaption>
+<p><span class="caption-text">This is an example of not enough pixels being classified as black, leading to sites which are truly on tissue, being classified as off tissue.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="_images/properthreshold_D223.png" src="_images/properthreshold_D223.png" />
+<figcaption>
+<p><span class="caption-text">This is an example of there being a good contrast between the on and off tissue sites of the image, ideally this will lead to a large proportion of the tixels being classified properly.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AtlasXomics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

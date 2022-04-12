@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; AtlasXbrowser Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="Installation.html" />
+    <link rel="prev" title="Welcome to AtlasXbrowser’s Documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AtlasXbrowser Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Sections:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OpeningFolder.html">Loading Tissue images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImageConfiguration.html">Image Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Thresholding.html">Thresholding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ROICharacterization.html">Characterizing Region of Interest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SpatialFolder.html">Utilizing Spatial Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExampleWalkthrough.html">Guided Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AtlasXbrowser Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h1>
+<p>AtlasXbrowser was built to help facilite the workflow of DBiT-sequencing. The problem AtlasXbrowser
+specifically solves is the conversion of tissue images into data that can be inputted directly
+into a bioinformatics pipeline.</p>
+<figure class="align-default">
+<img alt="_images/AtlasBrowser_Figure.png" src="_images/AtlasBrowser_Figure.png" />
+</figure>
+<p>As displayed in the image above, once images of the DBiT slide are prepared, the images are run through AtlasXbrowser
+while the slide is sent off to be sequenced in paralell. Once the sequencing is preformed and all necessary insights
+AtlasXbrowser have been obtained, both can be loaded back into the broswer to observe how the reads map onto the image.
+From here any bioinformatic analysis can be preformed on the spatial data, such that UMAP or spatial clustering.</p>
+<p>The two primary pieces of information AtlasXbrowser seeks to obtain are the coordinates of the four corners that
+define the Region of Interest, as well as deliniating which sites of the image correspond to biological tissue.</p>
+<p>AtlasXbrowser requires the loading of images taken of a glass slide from a DBiT Spatial Sequencing experiment.</p>
+<p>From a distance a DBiT run works by:</p>
+<ul>
+<li><p>Adhering tissue sample of interest to glass slide.</p>
+<blockquote>
+<div><figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="_images/TissueOnSlide.png"><img alt="_images/TissueOnSlide.png" src="_images/TissueOnSlide.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">The tissue which DBiT sequencing is to be preformed on is fixed onto a glass
+slide in preparation for the procedure.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Clamping chip A ontop of slide and flowing Chip A barcodes through tissue.</p>
+<blockquote>
+<div><figure class="align-default" id="id2">
+<img alt="_images/chipA.png" src="_images/chipA.png" />
+<figcaption>
+<p><span class="caption-text">The A chip flows DNA barcodes in vertical channels down the slide.
+Using the unique molecular identifier (UMI) associated with these barcodes allows to place an x coordinate on reads
+once the sequencing is preformed.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Removing A chip and clamping B chip onto slide.</p>
+<blockquote>
+<div><figure class="align-default" id="id3">
+<img alt="_images/chipB.png" src="_images/chipB.png" />
+<figcaption>
+<p><span class="caption-text">The B chip flows DNA barcodes in horizontal rows across the slide.
+The UMI associated with each of these barcodes allows for a Y coordinate to be inferred from a read.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>From here pictures are taken of the glass slide, following the removal of the B chip.</p>
+<blockquote>
+<div><figure class="align-default" id="id4">
+<img alt="_images/barcoded.png" src="_images/barcoded.png" />
+<figcaption>
+<p><span class="caption-text">After the B chip is removed, an X-Y plane has been created by the A chip barcodes flown across
+the tissue, and the B chip barcodes flown down the tissue. As such, any space on the tissue that
+has had both barcodes from the B and A chip flown through it, can have any reads sequencing from
+that region mapped back onto that spot in the image. These regions are called <strong>Tixels</strong>.
+Tixels are the basis of how spatial information is encoded from the DBiT process.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>From here the two steps of loading the images into AtlasXbrowser as well as sequencing the tissue can begin in paralell.</p>
+<blockquote>
+<div><figure class="align-default" id="id5">
+<img alt="_images/AtlasBrowser_sequencing.png" src="_images/AtlasBrowser_sequencing.png" />
+<figcaption>
+<p><span class="caption-text">As neither step is reliant on the other, AtlasXbrowser can be used to generate information about the image
+such as the metadata corresponding to the experiment, the boundaries of the overlapping A and B chips, and
+classification of on and off tissue sites of the image, while the particular assay being run on the tissue
+can be sequenced.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Using the results of the sequencing in conjunction with the spatial information encoded by the DBiT process,
+any bioinformatic analysis can be run on the data, like the spatial clustering shown below.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="_images/SpatialClustering.png" src="_images/SpatialClustering.png" />
+</figure>
+</div></blockquote>
+</li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to AtlasXbrowser’s Documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AtlasXomics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

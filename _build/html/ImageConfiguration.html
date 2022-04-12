@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Configuration &mdash; AtlasXbrowser Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AtlasXbrowser Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Image Configuration</a><ul>
+<li><a class="reference internal" href="#cropping-the-image">Cropping the Image</a></li>
+<li><a class="reference internal" href="#rotating-the-image">Rotating the Image</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AtlasXbrowser Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Image Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ImageConfiguration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="image-configuration">
+<h1>Image Configuration<a class="headerlink" href="#image-configuration" title="Permalink to this headline"></a></h1>
+<p>Now that the image is loaded into the browser and the relevent Metadata has been given,
+we can begin properly configuring the image.</p>
+<section id="cropping-the-image">
+<h2>Cropping the Image<a class="headerlink" href="#cropping-the-image" title="Permalink to this headline"></a></h2>
+<p>1.) Navigate to and click <strong>Activate</strong> under the <strong>Cropping</strong> tab on the right side of the screen.</p>
+<p>2.) Use your mouse to drag the red square to encapsulate the section of the image enclosed in the neon box. Leave excess space
+between the neon lines on the image and the cropping box’s red lines.</p>
+<figure class="align-default" id="id1">
+<img alt="_images/ExpandingCropBox.png" src="_images/ExpandingCropBox.png" />
+<figcaption>
+<p><span class="caption-text">Above is the unexpanded cropping box. Drag to encapsulate the neon box (ROI) of the image.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><em>Note:</em> The red box forces itself to be kept as a square. This is why the the rest of the box changes shap upon moving one side or corner.
+Due to the criteria of being kept a square, it is also possible that in order to encapsulate the entire ROI the red cropping box goes off the screen.
+As long as the entire neon outlined ROI is contained within the area of the red cropping box, this is fine.</p>
+<figure class="align-default" id="id2">
+<img alt="_images/ExpandedCropBox.png" src="_images/ExpandedCropBox.png" />
+<figcaption>
+<p><span class="caption-text">The cropping box has been configured to contain the entire ROI but still crop unnecessary excess from the image.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>3.) Click <strong>Confirm</strong> under the <strong>Cropping</strong> tab on the right side of the screen.</p>
+</section>
+<section id="rotating-the-image">
+<h2>Rotating the Image<a class="headerlink" href="#rotating-the-image" title="Permalink to this headline"></a></h2>
+<p>The use of different technologies to capture these images results in various orientation changes of the images.
+This rotation section of the program allows images to be reconfigured to the orientation used when the chip was placed.</p>
+<ol class="arabic">
+<li><p>Navigate to the <strong>Rotation</strong> tab on the right side of the screen and utilize the four buttons described below to re-orient the image. Each button can be clicked as many times as desired.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="rotate_left" src="_images/rotateleft.png" /> Rotates the image 90 degrees counter clockwise.</p></li>
+<li><p><img alt="rotate_right" src="_images/rotateright.png" /> Rotates the image 90 degrees clockwise.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Once the image is properly oriented select <strong>Confirm</strong>.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AtlasXomics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

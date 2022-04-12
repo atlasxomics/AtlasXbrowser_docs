@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; AtlasXbrowser Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Loading Tissue images" href="OpeningFolder.html" />
+    <link rel="prev" title="Overview" href="Overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AtlasXbrowser Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Sections:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#downloading">Downloading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-dependencies">Managing Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-atlasxbrowser">Running AtlasXbrowser</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OpeningFolder.html">Loading Tissue images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImageConfiguration.html">Image Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Thresholding.html">Thresholding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ROICharacterization.html">Characterizing Region of Interest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SpatialFolder.html">Utilizing Spatial Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExampleWalkthrough.html">Guided Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AtlasXbrowser Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h1>
+<p>Before running AtlasXbrowser, the software must be available to run on your local machine.
+Luckily the codebase for AtlasXbrowser is open source and freely hosted on Github.</p>
+<section id="downloading">
+<h2>Downloading<a class="headerlink" href="#downloading" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Open a terminal window and navigate to the directory where you want to download Atlas Browser to.</p></li>
+<li><p>Run the following commands into the terminal:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">atlasxomics</span><span class="o">/</span><span class="n">AtlasXbrowser</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">AtlasXbrowser</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">formazione</span><span class="o">/</span><span class="n">Azure</span><span class="o">-</span><span class="n">ttk</span><span class="o">-</span><span class="n">theme</span>
+</pre></div>
+</div>
+</section>
+<section id="managing-dependencies">
+<h2>Managing Dependencies<a class="headerlink" href="#managing-dependencies" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>AtlasXbrowser requires the usage of Python 3.7 as well as the installation of multiple outside packages. For these reasons we HIGHLY reccomend the usage of a virtual enviroment, specifcally Anaconda.</p></li>
+<li><p>If an Anaconda distribution is not currently installed on your system see the installation guide here, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/index.html">Anaconda</a>.</p>
+<blockquote>
+<div><ul>
+<li><dl>
+<dt>To check that anaconda was properly installed open a Terminal window and check the version isntalled by running:</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>conda –version</p>
+</dd>
+</dl>
+</li>
+<li><p>Once conda is installed, ensure it is running the latest distribution by running:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>With conda installed with an up to date version, create a python 3.7 enviroment with the command:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">py37</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Where “py37” can be any name of the enviroment.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">seaborn</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">tifffile</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">jsbeautifier</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pillow</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span>
+</pre></div>
+</div>
+</section>
+<section id="running-atlasxbrowser">
+<h2>Running AtlasXbrowser<a class="headerlink" href="#running-atlasxbrowser" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>To ensure the version on your machine is the latest update, run:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">AtlasXbrowser</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">atlasxomics</span><span class="o">/</span><span class="n">AtlasXbrowser</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Once ready, run AtlasXbrowser with the following command:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ABrowser</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="OpeningFolder.html" class="btn btn-neutral float-right" title="Loading Tissue images" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AtlasXomics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

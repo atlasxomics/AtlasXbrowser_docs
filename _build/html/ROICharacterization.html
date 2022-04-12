@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Characterizing Region of Interest &mdash; AtlasXbrowser Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AtlasXbrowser Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Characterizing Region of Interest</a><ul>
+<li><a class="reference internal" href="#locating-roi">Locating ROI</a></li>
+<li><a class="reference internal" href="#overlaying-tixels">Overlaying Tixels</a></li>
+<li><a class="reference internal" href="#acivating-tixels">Acivating Tixels</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AtlasXbrowser Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Characterizing Region of Interest</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ROICharacterization.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="characterizing-region-of-interest">
+<h1>Characterizing Region of Interest<a class="headerlink" href="#characterizing-region-of-interest" title="Permalink to this headline"></a></h1>
+<p>In this stage of the image processing, we want to narrow in on the <em>Region of Interest</em> or <em>ROI</em> of the tissue.
+This is the region in which the channels from Chip A overlap with those of Chip B, creating a grid of <strong>tixels</strong>.</p>
+<p>A <strong>tixel</strong> refers to a region of the slide which has both a microfluidic channel from Chip A and one from Chip B flowing through it.
+These regions are of interest as the barcodes provded by each chip can serve as x,y coordinates, allowing for a the sequencing data to be mapped
+back to the specific location of that tixel, thus preserving spatial information.</p>
+<section id="locating-roi">
+<h2>Locating ROI<a class="headerlink" href="#locating-roi" title="Permalink to this headline"></a></h2>
+<p>During this step we want to define the region of interest for the browser. This step is made much easier if the
+outside channels of the chip have BSA fluid with stained dye within them. As then the ROI corresponds to the square created
+by the overlap of these neon channels.</p>
+<ol class="arabic">
+<li><p>Navigate to the <strong>Locating ROI</strong> tab on the right hand side of the screen, and select <strong>Activate</strong>.</p></li>
+<li><p>Drag the corners of the newly displayed red box to be as close as possible to the edges of the ROI.</p>
+<blockquote>
+<div><p><em>Note:</em> The BSA is being flowed through the outside channels on both chips. As such these fluorescently dyed channels must be fully included when
+designating the ROI. In practice, this means the ideal placement of the red box is exactly on the outside of the fluorescently stained channels.</p>
+<figure class="align-default" id="id1">
+<img alt="_images/DraggingROI.png" src="_images/DraggingROI.png" />
+<figcaption>
+<p><span class="caption-text">Circles have been drawn on the image above to indicate the corners of the ROI.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="_images/ROILocated.png" src="_images/ROILocated.png" />
+<figcaption>
+<p><span class="caption-text">The above image shows the proper designation of the ROI, again note how the rectangle includes the channels containing fluorescence.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Once the four corners have properly placed, select <strong>Confirm</strong> within the same <strong>Locating ROI</strong> tab.</p></li>
+</ol>
+</section>
+<section id="overlaying-tixels">
+<h2>Overlaying Tixels<a class="headerlink" href="#overlaying-tixels" title="Permalink to this headline"></a></h2>
+<p>To check the work done in the last step, we must ensure that the alignment of the tixels on the image are as expected.
+The visualization of the tixels corresponds to how the ROI was discerned in the previous step.</p>
+<ul>
+<li><p>The <strong>Locating ROI</strong> tab allows the placement of the tixels to be visualized on top of the images.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Select the <strong>Tixels</strong> button to observe how the tixels are overlayed ontop of the binarized image.</p></li>
+<li><p>Select the <strong>BSA</strong> button to view the tixels overlayed onto the cropped BSA stained image.</p></li>
+</ul>
+<p><em>Note:</em> One way to check the placement of the ROI is to ensure that the outer rows and columns of the BSA image align with the BSA lines of the image, as shown below.</p>
+<figure class="align-default" id="id3">
+<img alt="_images/ProperlyPlacedROI.png" src="_images/ProperlyPlacedROI.png" />
+<figcaption>
+<p><span class="caption-text">In this image the outer layers of tixels both horizontally and vertically align with the BSA staining, validating the placement of the ROI.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>If the placement of the ROI must be re-done for any reason, just re-select the <strong>Activate</strong> button in the <strong>Locating ROI</strong> tab and the red rectangle can be re-adjusted.</p></li>
+</ul>
+</section>
+<section id="acivating-tixels">
+<h2>Acivating Tixels<a class="headerlink" href="#acivating-tixels" title="Permalink to this headline"></a></h2>
+<p>Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically guesses which tixels are over tissue and which are not.
+In this step you can examine the image and modify any of the classifications AtlasBrower made.</p>
+<ol class="arabic">
+<li><p>Select <strong>Activate</strong> under the <strong>On/Off Tissue</strong> tab on the right side of the screen.</p></li>
+<li><p>Tixels filled in red indicate that they are covering tissue, and clear tixels indicate they are not. Use any or multiple of the selection options to changes these designations.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Point (flip)</strong> Use your mouse to click on any individual tixel. The state of this tixel will flip from what identify formerly was, meaning on tissue sites to to off tissue and vice versa.</p></li>
+<li><p><strong>Rectangle (flip)</strong> Click and drag on screen to make an encompassing red rectangle. All the tixels included within this rectangle  will have their state flipped from what it formerly was.</p></li>
+<li><p><strong>Rectangle (all on)</strong> Click and drag on screen to create a rectangle which encompasses all desired tixels. Tixels in this region will all be designated as covering tissue.</p></li>
+<li><p><strong>Rectangle (all off)</strong> Click and drag on screen to create a rectangle which encompasses all desired tixels. Every tixel within this region will be designated as being off tissue.</p></li>
+</ul>
+<figure class="align-default" id="id4">
+<img alt="_images/ClassifyingTixels.png" src="_images/ClassifyingTixels.png" />
+<figcaption>
+<p><span class="caption-text">Using the background color along with the pattern of the underlying image, the user can amend the classifications made by AtlasXbrowser about which tixels are on or off tissue.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>The background of either the black and white thresholded image and the colored BSA image can be flipped back and forth by using the <strong>BW</strong> and <strong>BSA</strong> buttons under the <strong>Overlay</strong> tab.</p></li>
+<li><p>Once confident in the designations made about tixels being on/off tissue, select <strong>Create the Spatial Folder</strong>.</p>
+<blockquote>
+<div><figure class="align-center" id="id5">
+<img alt="_images/SpatialFolderCreated.png" src="_images/SpatialFolderCreated.png" />
+<figcaption>
+<p><span class="caption-text">This popup should appear upon the spatial folder being created.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Navigate to the next section to examine the newly created spatial folder.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AtlasXomics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utilizing Spatial Folder &mdash; AtlasXbrowser Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AtlasXbrowser Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Utilizing Spatial Folder</a><ul>
+<li><a class="reference internal" href="#examining-spatial-folder">Examining Spatial Folder</a></li>
+<li><a class="reference internal" href="#loading-spatial-folder">Loading Spatial Folder</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AtlasXbrowser Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Utilizing Spatial Folder</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/SpatialFolder.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="utilizing-spatial-folder">
+<h1>Utilizing Spatial Folder<a class="headerlink" href="#utilizing-spatial-folder" title="Permalink to this headline"></a></h1>
+<section id="examining-spatial-folder">
+<h2>Examining Spatial Folder<a class="headerlink" href="#examining-spatial-folder" title="Permalink to this headline"></a></h2>
+<p>Once the image has been processed using AtlasXbrowser, the relevent information will be stored within the Spatial Folder.</p>
+<ol class="arabic">
+<li><p>Navigate through your file directories to the location in which the original images read into AtlasXbrowser are located.</p></li>
+<li><p>Within this directory find the newly created folder labeled <strong>Spatial</strong>, examine the contents of this folder.</p></li>
+<li><p>The spatial file contains multiple items of interest:</p>
+<blockquote>
+<div><ul>
+<li><p>The Low Resolution and High Resolution versions of the cropped BSA image. These images are saved as <em>tissue_lowres_image.png</em> and <em>tissue_highres_image.png</em> respectively.</p></li>
+<li><p>The <em>metadata.json</em> file. This JSON file contains all the metadata entered upon loading the image through AtlasXbrowser, as well as:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Coordinates of the form x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>corresponding to the four corners of the ROI of the image.</p></li>
+<li><p>The information chosen about pixel thresholding, including <strong>BlockSize</strong> and <strong>threshold value</strong>.</p></li>
+<li><p>The number of on-tissue tixels within the image.</p></li>
+<li><p>The height of the image and the specifications about the image’s orientation, specifically the degrees it was rotated.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The <em>tissue_positions_list.csv</em> which contains the following information, specified in column order, starting from the left most:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The unique barcode corresponding to a specific tixel.</p></li>
+<li><p>An indicator for whether or not the tixel was designated as on or off tissue. A <strong>1</strong> indicates on-tissue and a <strong>0</strong> indicates off tissue.</p></li>
+<li><p>The row this tixel is found in, indexed starting from 0.</p></li>
+<li><p>The column the tixel is found in, indexed starting from 0.</p></li>
+<li><p>The X-Coordinate of the tixel.</p></li>
+<li><p>The Y-Coordinate of the tixel.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="loading-spatial-folder">
+<h2>Loading Spatial Folder<a class="headerlink" href="#loading-spatial-folder" title="Permalink to this headline"></a></h2>
+<p>Once the spatial folder has been created, it can be loaded back into AtlasXbrowser, allowing for quality control, as well as
+decisions made about what has on and off tissue to be changed.</p>
+<p>While one can load in the spatial folder directly after it is created by AtlasXbrowser, the functionality will be limited to
+re-doing the step in which a user manually identifies tixels as on or off tissue, following the predictions made by AtlasXbrowser.</p>
+<p>In order to visualize both the number of UMI’s and number of raw counts within a tixel, a user must generate a file titled
+<em>tissue_positions_list_log_UMI_Genes.csv</em>. This file is identical to the</p>
+<ol class="arabic">
+<li><p>Select <strong>File</strong>, then <strong>Open Spatial Folder</strong></p>
+<blockquote>
+<div><img alt="_images/OpeningSpatialFolder.png" src="_images/OpeningSpatialFolder.png" />
+</div></blockquote>
+</li>
+</ol>
+<p>#. The threshold image, along with the tixel grid, and accompanying tixel states will be loaded into the Browser.
+From here, navigated to under the <strong>Visualization</strong> tab, the user has three options to choose in what they want the browser
+to display.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Tixel:</strong> This view is identical to the manual tixel delination step during image processing, with the states of these tixels taken directly from what was saved during image processing.</p></li>
+<li><p><strong>Feature:</strong> This setting colors each tixel according to a log transform of the number of unique genes mapped to that tixel.</p></li>
+<li><p><strong>Count:</strong> This setting colors each tixel according to a log transform of the total number of counts mapped to that tixel.</p></li>
+</ul>
+<p>While on any one of these settings, the user is able to click and flip the on or off tissue designation of a tixel.
+This is most useful when originally a tixel was said to be on tissue, however then upon loading in the tissue_positions_list_log_UMI_Genes.csv file,
+there were no or minimal reads mapped to that tixel.</p>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AtlasXomics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

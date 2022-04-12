@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guided Example &mdash; AtlasXbrowser Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AtlasXbrowser Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Guided Example</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AtlasXbrowser Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Guided Example</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ExampleWalkthrough.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="guided-example">
+<h1>Guided Example<a class="headerlink" href="#guided-example" title="Permalink to this headline"></a></h1>
+<ol class="arabic">
+<li><p>To begin image processing:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Navigate to the top left of the screen and click <strong>File</strong>.</p></li>
+<li><p>Then select <strong>Begin Image Processing</strong>.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Once a popup has appeared:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select <strong>File</strong> in the first row labled “Select BSA Image”, and navigate to the directory of your image folder and select the BSA image.</p></li>
+<li><p>Select <strong>File</strong> in the second row labled “Select postB Image” from the same image folder, select the postB image.</p></li>
+<li><p>Enter the unique identifier you would like to you for this run in the textbox labeled, “Run ID”.</p></li>
+<li><p>Select the number of channels present on the chips being used for the DBiT. Here we are using 50 channel chips.</p></li>
+<li><p>Select the barcode orientation setting, corresponding to how the chip was placed on the tissue. Here we are selecting 1.</p></li>
+</ol>
+<p>Once entered select <strong>Submit</strong> at the bottom of the pop-up window.
+Now the BSA image should be displayed in the browser, as shown below.</p>
+<img alt="_images/D223LoadedIn.png" src="_images/D223LoadedIn.png" />
+</div></blockquote>
+</li>
+<li><p>Activate cropping by selecting <strong>Acivate</strong> within the <strong>Cropping</strong> section in the top right of the screen.</p></li>
+<li><p>Drag the corners of the square to include the entire <em>Region of Interest</em>, defined by the green stained BSA lines.</p>
+<blockquote>
+<div><figure class="align-default" id="id1">
+<img alt="_images/ExpandedCropBox.png" src="_images/ExpandedCropBox.png" />
+<figcaption>
+<p><span class="caption-text">The cropping box has been expanded to include the entire ROI.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Once the cropping square has been stretched to include the ROI, including some extra buffer room, select <strong>Confirm</strong> within the <strong>Cropping</strong> tab.</p></li>
+<li><p>Now we have the opportunity to rotate the image as necessary. For this image, no rotations are required. However there is no harm in using the rotation buttons as they can always work to re-orient the image back to its original state.</p>
+<blockquote>
+<div><p>If it is necissary to rotate the image the following buttons can be selected as many times as desired. Rotate using the following buttons:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="rotate_left" src="_images/rotateleft.png" /> Rotates the image 90 degrees counter clockwise.</p></li>
+<li><p><img alt="rotate_right" src="_images/rotateright.png" /> Rotates the image 90 degrees clockwise.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p>Once the image is rotated as desired, proceed to the pixel thresholding step by selecting <strong>Activate</strong> under the <strong>Adaptive Thresholding</strong> tab.</p>
+<blockquote>
+<div><figure class="align-default" id="id2">
+<img alt="_images/OriginalThresholdedImage.png" src="_images/OriginalThresholdedImage.png" />
+<figcaption>
+<p><span class="caption-text">Upon activating the adapative thesholding portion, a black and white version of the image,as seen above, should be loaded onto the screen.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Use the sliders labeled <strong>blocksize</strong> and <strong>C</strong> to create the maximal gradient between the light and dark sections of the image.
+Experiment with different values of the sliders to see how high and low values of each affect the image.</p>
+<figure class="align-default" id="id3">
+<img alt="_images/AdjustedThreshold.png" src="_images/AdjustedThreshold.png" />
+<figcaption>
+<p><span class="caption-text">This an an example of <strong>blocksize</strong> and <strong>C</strong> settings which produce good contrast within the image.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Once the sliders under the <strong>Adaptive Thresholding</strong> tab have been configured, and there is high contrast between the light and dark regions of the image, begin the process of ROI location by selecting <strong>Activate</strong>, under the <strong>Locating ROI</strong> tab.</p></li>
+<li><p>Unlike when cropping the image previously, here we must be precise about the determination of the ROI. Drag the red rectangle to the borders of the ROI, created by the BSA staining on the image.</p>
+<blockquote>
+<div><figure class="align-default" id="id4">
+<img alt="_images/PlacingROILines.png" src="_images/PlacingROILines.png" />
+<figcaption>
+<p><span class="caption-text">In order to indify the ROI the user must drag the corners of this red square to the outside of the fluorescent lines.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><em>Note:</em> The dye is being run through channels of the chips, and as such must be included within this rectangle. The optimal placement of this rectangle is directly on the outside borders of the channels containing the BSA staining.</p>
+<figure class="align-default" id="id5">
+<img alt="_images/ProperlyPlacedROI.png" src="_images/ProperlyPlacedROI.png" />
+<figcaption>
+<p><span class="caption-text">This is a properly placed box, notice how it inclues the channels containing the BSA staining.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>Once the rectangle is lined up to the ROI, select <strong>Confirm</strong> under the same <strong>Locating ROI</strong> tab.</p></li>
+<li><p>To check whether the ROI specified in the previous step is valid, we can view how the tixels corresponding to this ROI align to the image.</p>
+<blockquote>
+<div><ul>
+<li><p>Under the <strong>Overlay</strong> tab on the right side of the screen, select <strong>BSA</strong>. This displays in the browser the hypothetical aligned on the BSA stained image.</p></li>
+<li><p>Check to ensure that the tixels on the outer channels of image, both horizontal and vertical, align with the BSA staining.</p>
+<blockquote>
+<div><figure class="align-default" id="id6">
+<img alt="_images/OutlinedROILocation.png" src="_images/OutlinedROILocation.png" />
+<figcaption>
+<p><span class="caption-text">The blue rectangles in the image above refer to the outer channels of the image which should be aligned with the BSA.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>If the tixels are not aligned, navigate to the <strong>Locating ROI</strong> tab and re-select <strong>Activate</strong> to allow for edits to the chosen ROI region.</p></li>
+<li><p>Within the <strong>Overlay</strong> tab there is also a button labeled, <strong>Tixels</strong>. This allows the tixels to be displayed over the thresholded image.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Once it has been confirmed that the tixels are properly aligned to the BSA channels, select <strong>Activate</strong> under the <strong>On/Off Tissue</strong> tab.</p></li>
+<li><p>At this point, the thresholded image, overlayed with the tixel grid, should be displayed on screen. The tixels should either be filled in red or remain clear.</p>
+<blockquote>
+<div><ul>
+<li><p>What is currently displayed on screen are the classifications that AtlasXbrowser made based on the Adaptive Thresholding step, for which tixels are on top of biological tissue and which are not.</p></li>
+<li><p>You are now able to review the decisions that AtlasXbrowser made and change them as you see fit.</p></li>
+<li><p>To change the state of the tixels, select one of the options from the list of:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>Point (flip)</em> which changes the state of whatever tixel is clicked on.</p></li>
+<li><p><em>Rectangle (flip)</em> which allows for a rectangle to be drawn on screen and flips the state of every tixel contained in that rectangle.</p></li>
+<li><p><em>Rectangle (all on)</em> allows for a rectangle to be drawn on screen and turns all tixels contained in this region on.</p></li>
+<li><p><em>Rectangle (all off)</em> allows for a rectangle to be drawn on screen and turns all tixels contained in the region off.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Once confident that the coloring of the tixels are accurate, meaning the tixels covering tissue are red, and the tixels not over tissue are clear, select <strong>Create Spatial Folder</strong> at the bottom of the screen.</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AtlasXomics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

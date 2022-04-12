@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading Tissue images &mdash; AtlasXbrowser Documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AtlasXbrowser Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Loading Tissue images</a><ul>
+<li><a class="reference internal" href="#image-specifications-and-fluorescent-staining">Image Specifications and Fluorescent Staining</a></li>
+<li><a class="reference internal" href="#image-folder-specifications">Image Folder Specifications</a></li>
+<li><a class="reference internal" href="#loading-image-and-entering-metadata">Loading Image and Entering Metadata</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AtlasXbrowser Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Loading Tissue images</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/OpeningFolder.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="loading-tissue-images">
+<h1>Loading Tissue images<a class="headerlink" href="#loading-tissue-images" title="Permalink to this headline"></a></h1>
+<section id="image-specifications-and-fluorescent-staining">
+<h2>Image Specifications and Fluorescent Staining<a class="headerlink" href="#image-specifications-and-fluorescent-staining" title="Permalink to this headline"></a></h2>
+<p>The image which is to be loaded into AtlasXbrowser should be taken following the removal of the B chip
+from the glass slide.</p>
+<p>While using AtlasXbrowser the user will be prompted to locate the ROI of the image corresponding to the region
+in which the A and B chips overlap. This is made much easier by flowing Bovine Serum Albumin (BSA) solution mixed with
+fluorescent dye through the outside channels of both the A and B chip. These fluorescent colors will make is visually very
+clear where the overlap of the two chips are, it is will be enclosed by this colored square.</p>
+<p><em>Note:</em> We reccomend using two different colors of fluorescent dye on each chip to allow for easy orientation
+of the image once it has been rotated.</p>
+<p>The two images required for processing are the BSA and postB images.</p>
+<p><strong>BSA Image:</strong> Image taken with the microscope following the flowing of BSA solution through the outside channels of the chips.</p>
+<p><strong>postB Image:</strong> Brightfield version of the BSA image, also taken, following the removal of the B-chip.</p>
+<blockquote>
+<div><figure class="align-default" id="id1">
+<img alt="_images/Both_images.png" src="_images/Both_images.png" />
+<figcaption>
+<p><span class="caption-text">(Left) The postB image, (Right) the BSA image. Notice how they are the same underlying image. Also note in the
+BSA image how the fluorescent staining of two different colors allows for easy identification of proper orientation
+following any rotations that may occur from this point on.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</section>
+<section id="image-folder-specifications">
+<h2>Image Folder Specifications<a class="headerlink" href="#image-folder-specifications" title="Permalink to this headline"></a></h2>
+<p>To use AtlasXbrowser for image processing, a proper image folder must be prepared.
+The folder to be used in the Browser contains both the <strong>BSA Image</strong> and the <strong>postB Image</strong>.</p>
+<p>While these files can be named whatever the user wants, they two images must be stored within the same folder, we highly reccomend creating a
+new folder pertaining this particular run which will store these two images, and the relevant folders and files generated by AtlasXbrowser.</p>
+<blockquote>
+<div><img alt="_images/FolderCreated.png" src="_images/FolderCreated.png" />
+</div></blockquote>
+<p>See above how a new folder was created, storing the BSA and postB images to be used by AtlasXbrowser.</p>
+</section>
+<section id="loading-image-and-entering-metadata">
+<h2>Loading Image and Entering Metadata<a class="headerlink" href="#loading-image-and-entering-metadata" title="Permalink to this headline"></a></h2>
+<p>In order to begin processing the tissue image, the relevant images must be loaded in.</p>
+<ol class="arabic">
+<li><p>Navigate to the <em>File</em> tab in the top left corner of the screen.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="_images/SelectingFile.png" src="_images/SelectingFile.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Select “Begin Image Processing”.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="_images/BeginImageProcessing.png" src="_images/BeginImageProcessing.png" />
+</figure>
+</div></blockquote>
+</li>
+<li><p>Once selected a pop-up window should appear on screen.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="_images/OpeningImage_selectingMeta.png" src="_images/OpeningImage_selectingMeta.png" />
+</figure>
+</div></blockquote>
+</li>
+</ol>
+<p><strong>1.)</strong> Select <strong>File</strong> in the first row of the pop-up titled, “Select BSA Image”. Then navigate to the directory
+of the image folder, and select the BSA image.</p>
+<p><strong>2.)</strong> Select <strong>File</strong> in the second row, labeled “Select postB Image”. Navigate to the image folder, and select the postB image.</p>
+<p><strong>3.)</strong> Enter the desired name of the run in the textbox.</p>
+<p><strong>4.)</strong> Select the number of channels on the chips being used. This will either be 50 or 100.</p>
+<p><strong>5.)</strong> Select the barcode orientation used in the experiment.</p>
+<p><strong>6.)</strong> Once the images have been loaded in without error, and information entered, select <strong>Submit</strong> to continue with the image processing.</p>
+<p>Upon selecting <strong>Submit</strong>, the popup should dissapear and the BSA image should be loaded into the main window of the Browser.</p>
+<p>This metadata will be saved and stored in the associated Spatial Folder for this experiment.
+Now we can proceed to configuring the image.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, AtlasXomics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
