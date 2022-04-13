@@ -28,7 +28,7 @@ Managing Dependencies
 
 
    * To check that anaconda was properly installed open a Terminal window and check the version isntalled by running:
-   
+
       .. code-block::
 
          conda --version
@@ -61,7 +61,7 @@ Managing Dependencies
 
       python --version
 
-   This should return Python 3.7.xx. If this is not the case, ensure deactivate the conda enviroment using "conda deactivate'. Repeat this command until there is no conda enviorment listed at the left side of the terminal, and try reactivate the enviroment.
+   This should return Python 3.7.xx. If this is not the case, deactivate the conda enviroment using "conda deactivate'. Repeat this command until there is no conda enviorment listed at the left side of the terminal and then reactivate the enviroment.
 
 * To install all the necessary packages for AtlasXBrowser run the following commands in the activated conda enviroment.
 
