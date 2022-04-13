@@ -23,9 +23,12 @@ Managing Dependencies
 
 * AtlasXbrowser requires the usage of Python 3.7 as well as the installation of multiple outside packages. For these reasons we HIGHLY reccomend the usage of a virtual enviroment, specifcally Anaconda.
 
+
 * If an Anaconda distribution is not currently installed on your system see the installation guide here, `Anaconda`_.
 
+
    * To check that anaconda was properly installed open a Terminal window and check the version isntalled by running:
+   
       .. code-block::
 
          conda --version
@@ -48,24 +51,32 @@ Managing Dependencies
 
    .. code-block::
 
+      conda deactivate
       conda activate py37
 
+
+* To check this conda enviroment is running the proper python version run:
+
+   .. code-block::
+
+      python --version
+
+   This should return Python 3.7.xx. If this is not the case, ensure deactivate the conda enviroment using "conda deactivate'. Repeat this command until there is no conda enviorment listed at the left side of the terminal, and try reactivate the enviroment.
+
+* To install all the necessary packages for AtlasXBrowser run the following commands in the activated conda enviroment.
+
+   .. code-block::
+
+      conda install -c conda-forge scipy
+      conda install -c conda-forge seaborn
+      conda install -c conda-forge tifffile
+      conda install -c conda-forge jsbeautifier
+      conda install -c conda-forge pandas
+      conda install -c conda-forge pillow
+      conda install -c conda-forge matplotlib
+      conda install -c fastai opencv-python-headless
+      conda install -c conda-forge python-magic
    
-
-
-
-
-
-.. code-block::
-
-   pip install scipy
-   pip install seaborn
-   pip install tifffile
-   pip install jsbeautifier
-   pip install pandas
-   pip install pillow
-   pip install matplotlib
-   pip install opencv-python
 
 Running AtlasXbrowser
 #####################

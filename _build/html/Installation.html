@@ -101,13 +101,12 @@ Luckily the codebase for AtlasXbrowser is open source and freely hosted on Githu
 <li><p>If an Anaconda distribution is not currently installed on your system see the installation guide here, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/index.html">Anaconda</a>.</p>
 <blockquote>
 <div><ul>
-<li><dl>
-<dt>To check that anaconda was properly installed open a Terminal window and check the version isntalled by running:</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<li><p>To check that anaconda was properly installed open a Terminal window and check the version isntalled by running:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 </div>
-<p>conda –version</p>
-</dd>
-</dl>
+</div></blockquote>
 </li>
 <li><p>Once conda is installed, ensure it is running the latest distribution by running:</p></li>
 </ul>
@@ -121,20 +120,41 @@ Luckily the codebase for AtlasXbrowser is open source and freely hosted on Githu
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">py37</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span>
 </pre></div>
 </div>
+<p>Where “py37” can be any name of the enviroment.</p>
+</div></blockquote>
+</li>
+<li><p>Once created, navigate to the directory where AtlasXbrowser is cloned to and run:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">deactivate</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">py37</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>To check this conda enviroment is running the proper python version run:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>This should return Python 3.7.xx. If this is not the case, ensure deactivate the conda enviroment using “conda deactivate’. Repeat this command until there is no conda enviorment listed at the left side of the terminal, and try reactivate the enviroment.</p>
+</div></blockquote>
+</li>
+<li><p>To install all the necessary packages for AtlasXBrowser run the following commands in the activated conda enviroment.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">scipy</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">seaborn</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">tifffile</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jsbeautifier</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pandas</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pillow</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">matplotlib</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">fastai</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">headless</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">python</span><span class="o">-</span><span class="n">magic</span>
+</pre></div>
+</div>
 </div></blockquote>
 </li>
 </ul>
-<p>Where “py37” can be any name of the enviroment.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">seaborn</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">tifffile</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">jsbeautifier</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">pillow</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span>
-</pre></div>
-</div>
 </section>
 <section id="running-atlasxbrowser">
 <h2>Running AtlasXbrowser<a class="headerlink" href="#running-atlasxbrowser" title="Permalink to this headline"></a></h2>
