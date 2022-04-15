@@ -75,7 +75,6 @@ Managing Dependencies
       conda install -c conda-forge pillow
       conda install -c conda-forge matplotlib
       conda install -c fastai opencv-python-headless
-      conda install -c conda-forge python-magic
    
 
 Running AtlasXbrowser
