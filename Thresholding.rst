@@ -1,5 +1,5 @@
-Thresholding
-____________
+ThresholdingT
+_____________
 
 In order to determine purely from the image, which regions correspond to biological tissue and which do not
 we use adaptive thresholding to convert each pixel to either be black or white. From there we can make infrences, based
