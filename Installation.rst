@@ -14,8 +14,6 @@ Downloading
 .. code-block::
 
    git clone https://github.com/atlasxomics/AtlasXbrowser.git
-   cd AtlasXbrowser
-   git clone https://github.com/formazione/Azure-ttk-theme
 
 
 Managing Dependencies
