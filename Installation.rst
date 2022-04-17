@@ -2,7 +2,7 @@ Installation
 ------------
 
 Before running AtlasXbrowser, the software must be available to run on your local machine.
-Luckily the codebase for AtlasXbrowser is open source and freely hosted on Github.
+Luckily the codebase for AtlasXbrowser is open source and freely hosted on Github, `AtlasXbrowser`_.
 
 Downloading
 ###########
@@ -93,6 +93,9 @@ Running AtlasXbrowser
     
 
 .. _Anaconda: https://docs.anaconda.com/anaconda/install/index.html
+
+.. _AtlasXbrowser: https://github.com/atlasxomics/AtlasXbrowser.git
+
 
 
 

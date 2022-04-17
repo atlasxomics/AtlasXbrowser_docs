@@ -2,11 +2,10 @@ Characterizing Region of Interest
 __________________________________
 
 In this stage of the image processing, we want to narrow in on the *Region of Interest* or *ROI* of the tissue. 
-This is the region in which the channels from Chip A overlap with those of Chip B, creating a grid of **tixels**.
-
-A **tixel** refers to a region of the slide which has both a microfluidic channel from Chip A and one from Chip B flowing through it.
-These regions are of interest as the barcodes provded by each chip can serve as x,y coordinates, allowing for a the sequencing data to be mapped
-back to the specific location of that tixel, thus preserving spatial information.
+This is the region in which the barcodes flown from chip A  overlap with the barcodes flown from chip B, allowing for the preservation of spatial information.
+Each region on the slide which has a unique combination of barcodes from chip A, as well as barcodes from chip B, is called a **Tixel**. During a DBiT-seq experiment,
+a grid of tixels is created on the slide. For each one of these tixels, with the knowledge of which channel each barcode sequence comes from, the unique combination of barcodes
+from an A chip and B chip channel, serve as X and Y coordinates used to map sequencing reads back to their proper spatial orientation on the tissue.
 
 Locating ROI
 ############
@@ -56,7 +55,7 @@ The visualization of the tixels corresponds to how the ROI was discerned in the 
 Acivating Tixels
 ################
 
-Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically guesses which tixels are over tissue and which are not.
+Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically predicts which tixels are over tissue and which are not.
 In this step you can examine the image and modify any of the classifications AtlasBrower made.
 
 #. Select **Activate** under the **On/Off Tissue** tab on the right side of the screen. 

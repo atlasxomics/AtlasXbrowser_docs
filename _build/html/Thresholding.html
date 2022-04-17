@@ -18,7 +18,9 @@
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Characterizing Region of Interest" href="ROICharacterization.html" />
+    <link rel="prev" title="Image Configuration" href="ImageConfiguration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,15 +38,22 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Thresholding</a><ul>
-<li><a class="reference internal" href="#tuning-parameters">Tuning Parameters</a></li>
-<li><a class="reference internal" href="#thresholding-examples">Thresholding Examples</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Sections:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OpeningFolder.html">Loading Tissue images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImageConfiguration.html">Image Configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Thresholding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tuning-parameters">Tuning Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#thresholding-examples">Thresholding Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="ROICharacterization.html">Characterizing Region of Interest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SpatialFolder.html">Utilizing Spatial Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExampleWalkthrough.html">Guided Example</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -71,9 +80,9 @@
              
   <section id="thresholding">
 <h1>Thresholding<a class="headerlink" href="#thresholding" title="Permalink to this headline"></a></h1>
-<p>In order to determine purely from the image, which regions correspond to biological tissue and which do not
-we use adaptive thresholding to convert each pixel to either be black or white. From there we can make infrences, based
-on the number of black vs. white pixels as to whether a given region on the screen is ontop of tissue, or not.</p>
+<p>In order to determine purely from the image, which regions correspond to biological tissue and which do not,
+we use adaptive thresholding to binarize the image by converting each pixel to either be black or white. From there we can make inferences, based
+on the number of black vs. white pixels within a given tixel, as to whether a given tixel is ontop of tissue, or not.</p>
 <p>To understand this process it is useful to remember that a digital image is a essentially a grid of pixels, each taking on
 a discrete color. Each pixel can take on one of <span class="math notranslate nohighlight">\(2^8\)</span> different possibilites, with values from 0 to 255. Where a pixel
 of value 0 is black, and 255 is white. In this step we take the image, with pixels each ranging in intensity from values 0 to 255, and
@@ -85,6 +94,12 @@ slide, so in an ideal outcome, all biological tissue is designated as black and 
 <ol class="arabic">
 <li><p>Navigate to the <strong>Adaptive Thresholding</strong> tab on the right side of the screen and select <strong>Activate.</strong></p></li>
 <li><p>Slide the <strong>BlockSize</strong> slider and <strong>C</strong> slider to find the optimal gradient between the sections of the images corresponding to tissue and those not. Use the examples below as a guide for this process.</p>
+<figure class="align-default" id="id1">
+<img alt="_images/AdjustedThreshold.png" src="_images/AdjustedThreshold.png" />
+<figcaption>
+<p><span class="caption-text">Use the two sliders pointed to above and create a contrast between the regions of the image that are on vs. off tissue.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <ul>
 <li><p>The BlockSize and C parameters are used to calculate the local pixel intensity threshold which divides pixels to be turned black to those turned white.</p></li>
 <li><p>This threshold, T, is calculated by <span class="math notranslate nohighlight">\(T = mean(I_L) - C\)</span></p>
@@ -117,22 +132,22 @@ slide, so in an ideal outcome, all biological tissue is designated as black and 
 </section>
 <section id="thresholding-examples">
 <h2>Thresholding Examples<a class="headerlink" href="#thresholding-examples" title="Permalink to this headline"></a></h2>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="id2">
 <img alt="_images/darkthreshold_D223.png" src="_images/darkthreshold_D223.png" />
 <figcaption>
-<p><span class="caption-text">This is an example of too many of the pixels being classified as black, which leads to off tissue sites being designated as on tissue sites.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id2">
-<img alt="_images/lightthreshold_D223.png" src="_images/lightthreshold_D223.png" />
-<figcaption>
-<p><span class="caption-text">This is an example of not enough pixels being classified as black, leading to sites which are truly on tissue, being classified as off tissue.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">This is an example of too many of the pixels being classified as black, which leads to off tissue sites being designated as on tissue sites.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id3">
+<img alt="_images/lightthreshold_D223.png" src="_images/lightthreshold_D223.png" />
+<figcaption>
+<p><span class="caption-text">This is an example of not enough pixels being classified as black, leading to sites which are truly on tissue, being classified as off tissue.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
 <img alt="_images/properthreshold_D223.png" src="_images/properthreshold_D223.png" />
 <figcaption>
-<p><span class="caption-text">This is an example of there being a good contrast between the on and off tissue sites of the image, ideally this will lead to a large proportion of the tixels being classified properly.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">This is an example of there being a good contrast between the on and off tissue sites of the image, ideally this will lead to a large proportion of the tixels being classified properly.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -141,7 +156,10 @@ slide, so in an ideal outcome, all biological tissue is designated as black and 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ImageConfiguration.html" class="btn btn-neutral float-left" title="Image Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ROICharacterization.html" class="btn btn-neutral float-right" title="Characterizing Region of Interest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

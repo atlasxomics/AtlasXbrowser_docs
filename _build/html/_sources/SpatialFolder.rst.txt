@@ -50,11 +50,11 @@ In order to visualize both the number of UMI's and number of raw counts within a
 *tissue_positions_list_log_UMI_Genes.csv*. This file is identical to the 
 
 
-#. Select **File**, then **Open Spatial Folder**
+1.) Select **File**, then **Open Spatial Folder**
 
     .. image:: /images/OpeningSpatialFolder.png
 
-#. The threshold image, along with the tixel grid, and accompanying tixel states will be loaded into the Browser.
+2.) The threshold image, along with the tixel grid, and accompanying tixel states will be loaded into the Browser.
 From here, navigated to under the **Visualization** tab, the user has three options to choose in what they want the browser
 to display.
 

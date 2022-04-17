@@ -17,7 +17,9 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utilizing Spatial Folder" href="SpatialFolder.html" />
+    <link rel="prev" title="Thresholding" href="Thresholding.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,16 +37,23 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Characterizing Region of Interest</a><ul>
-<li><a class="reference internal" href="#locating-roi">Locating ROI</a></li>
-<li><a class="reference internal" href="#overlaying-tixels">Overlaying Tixels</a></li>
-<li><a class="reference internal" href="#acivating-tixels">Acivating Tixels</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Sections:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OpeningFolder.html">Loading Tissue images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImageConfiguration.html">Image Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Thresholding.html">Thresholding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Characterizing Region of Interest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#locating-roi">Locating ROI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overlaying-tixels">Overlaying Tixels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acivating-tixels">Acivating Tixels</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="SpatialFolder.html">Utilizing Spatial Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExampleWalkthrough.html">Guided Example</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -72,10 +81,10 @@
   <section id="characterizing-region-of-interest">
 <h1>Characterizing Region of Interest<a class="headerlink" href="#characterizing-region-of-interest" title="Permalink to this headline"></a></h1>
 <p>In this stage of the image processing, we want to narrow in on the <em>Region of Interest</em> or <em>ROI</em> of the tissue.
-This is the region in which the channels from Chip A overlap with those of Chip B, creating a grid of <strong>tixels</strong>.</p>
-<p>A <strong>tixel</strong> refers to a region of the slide which has both a microfluidic channel from Chip A and one from Chip B flowing through it.
-These regions are of interest as the barcodes provded by each chip can serve as x,y coordinates, allowing for a the sequencing data to be mapped
-back to the specific location of that tixel, thus preserving spatial information.</p>
+This is the region in which the barcodes flown from chip A  overlap with the barcodes flown from chip B, allowing for the preservation of spatial information.
+Each region on the slide which has a unique combination of barcodes from chip A, as well as barcodes from chip B, is called a <strong>Tixel</strong>. During a DBiT-seq experiment,
+a grid of tixels is created on the slide. For each one of these tixels, with the knowledge of which channel each barcode sequence comes from, the unique combination of barcodes
+from an A chip and B chip channel, serve as X and Y coordinates used to map sequencing reads back to their proper spatial orientation on the tissue.</p>
 <section id="locating-roi">
 <h2>Locating ROI<a class="headerlink" href="#locating-roi" title="Permalink to this headline"></a></h2>
 <p>During this step we want to define the region of interest for the browser. This step is made much easier if the
@@ -129,7 +138,7 @@ The visualization of the tixels corresponds to how the ROI was discerned in the 
 </section>
 <section id="acivating-tixels">
 <h2>Acivating Tixels<a class="headerlink" href="#acivating-tixels" title="Permalink to this headline"></a></h2>
-<p>Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically guesses which tixels are over tissue and which are not.
+<p>Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically predicts which tixels are over tissue and which are not.
 In this step you can examine the image and modify any of the classifications AtlasBrower made.</p>
 <ol class="arabic">
 <li><p>Select <strong>Activate</strong> under the <strong>On/Off Tissue</strong> tab on the right side of the screen.</p></li>
@@ -168,7 +177,10 @@ In this step you can examine the image and modify any of the classifications Atl
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Thresholding.html" class="btn btn-neutral float-left" title="Thresholding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="SpatialFolder.html" class="btn btn-neutral float-right" title="Utilizing Spatial Folder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

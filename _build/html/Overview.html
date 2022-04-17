@@ -75,78 +75,69 @@
              
   <section id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h1>
-<p>AtlasXbrowser was built to help facilite the workflow of DBiT-sequencing. The problem AtlasXbrowser
-specifically solves is the conversion of tissue images into data that can be inputted directly
-into a bioinformatics pipeline.</p>
+<p>AtlasXbrowser was built to help facilite the image processing aspect of the DBiT-seq workflow. Taking in both a brightfied and epifluorescent image of the chipped tissue, AtlasXbrowser
+guides the user through the steps necessary to generate a “Spatial Folder”. This folder contains the output of the image processing in 10x Visium image data format,
+allowing for easy incorporation into bioinformatics packages used in spatial seq analysis.</p>
 <figure class="align-default">
-<img alt="_images/AtlasBrowser_Figure.png" src="_images/AtlasBrowser_Figure.png" />
+<img alt="_images/UpdatedFigure.png" src="_images/UpdatedFigure.png" />
 </figure>
-<p>As displayed in the image above, once images of the DBiT slide are prepared, the images are run through AtlasXbrowser
-while the slide is sent off to be sequenced in paralell. Once the sequencing is preformed and all necessary insights
-AtlasXbrowser have been obtained, both can be loaded back into the broswer to observe how the reads map onto the image.
-From here any bioinformatic analysis can be preformed on the spatial data, such that UMAP or spatial clustering.</p>
-<p>The two primary pieces of information AtlasXbrowser seeks to obtain are the coordinates of the four corners that
-define the Region of Interest, as well as deliniating which sites of the image correspond to biological tissue.</p>
-<p>AtlasXbrowser requires the loading of images taken of a glass slide from a DBiT Spatial Sequencing experiment.</p>
+<p>As seen in the figure above, following the removal of the B chip and flowing of fluorescently stained BSA, the images are taken. From here they
+are loaded into AtlasXbrowser, and prepared for sequencing in paralell. On the image processing side, AtlasXbrowser guides the user through identifying the Region of Interest (ROI) corresponding, to
+the section of tissue in which Chip A and B channels overlap. Following this the image is binarized using adaptive thresholding, and AtlasXbrowser uses this to predict which regions of the image correspond to biological tissue and which do not.
+With on and off tissue sites delineated, the Spatial Folder corresponding to that particular run can be created.
+While the image processing in AtlasXbrowser is occuring, tissue containing the DBiT barcodes is able to be sequenced. Once that data is generated, it can be coupled with the information
+of the Spatial Folder to preform bioinformatic analysis. As seen on the right of the image, examples of this include UMAP or Spatial Clustering.
+Also at this point, once the reads of the tissue are obtained, the obtained counts in conjunction with the spatial folder can also be loaded back into AtlasXbrowser, to both make adjustments about what is considered on
+and off tissue, and preform quality control on the DBiT run.</p>
 <p>From a distance a DBiT run works by:</p>
 <ul>
-<li><p>Adhering tissue sample of interest to glass slide.</p>
-<blockquote>
-<div><figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="_images/TissueOnSlide.png"><img alt="_images/TissueOnSlide.png" src="_images/TissueOnSlide.png" style="width: 300px;" /></a>
-<figcaption>
-<p><span class="caption-text">The tissue which DBiT sequencing is to be preformed on is fixed onto a glass
-slide in preparation for the procedure.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</div></blockquote>
-</li>
+<li><p>Adhering tissue sample of interest to glass slide.</p></li>
 <li><p>Clamping chip A ontop of slide and flowing Chip A barcodes through tissue.</p>
 <blockquote>
-<div><figure class="align-default" id="id2">
+<div><figure class="align-default" id="id1">
 <img alt="_images/chipA.png" src="_images/chipA.png" />
 <figcaption>
 <p><span class="caption-text">The A chip flows DNA barcodes in vertical channels down the slide.
 Using the unique molecular identifier (UMI) associated with these barcodes allows to place an x coordinate on reads
-once the sequencing is preformed.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+once the sequencing is preformed.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
 </li>
 <li><p>Removing A chip and clamping B chip onto slide.</p>
 <blockquote>
-<div><figure class="align-default" id="id3">
+<div><figure class="align-default" id="id2">
 <img alt="_images/chipB.png" src="_images/chipB.png" />
 <figcaption>
 <p><span class="caption-text">The B chip flows DNA barcodes in horizontal rows across the slide.
-The UMI associated with each of these barcodes allows for a Y coordinate to be inferred from a read.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+The UMI associated with each of these barcodes allows for a Y coordinate to be inferred from a read.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
 </li>
 <li><p>From here pictures are taken of the glass slide, following the removal of the B chip.</p>
 <blockquote>
-<div><figure class="align-default" id="id4">
+<div><figure class="align-default" id="id3">
 <img alt="_images/barcoded.png" src="_images/barcoded.png" />
 <figcaption>
 <p><span class="caption-text">After the B chip is removed, an X-Y plane has been created by the A chip barcodes flown across
 the tissue, and the B chip barcodes flown down the tissue. As such, any space on the tissue that
 has had both barcodes from the B and A chip flown through it, can have any reads sequencing from
 that region mapped back onto that spot in the image. These regions are called <strong>Tixels</strong>.
-Tixels are the basis of how spatial information is encoded from the DBiT process.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+Tixels are the basis of how spatial information is encoded from the DBiT process.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
 </li>
 <li><p>From here the two steps of loading the images into AtlasXbrowser as well as sequencing the tissue can begin in paralell.</p>
 <blockquote>
-<div><figure class="align-default" id="id5">
+<div><figure class="align-default" id="id4">
 <img alt="_images/AtlasBrowser_sequencing.png" src="_images/AtlasBrowser_sequencing.png" />
 <figcaption>
 <p><span class="caption-text">As neither step is reliant on the other, AtlasXbrowser can be used to generate information about the image
 such as the metadata corresponding to the experiment, the boundaries of the overlapping A and B chips, and
 classification of on and off tissue sites of the image, while the particular assay being run on the tissue
-can be sequenced.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+can be sequenced.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -160,6 +151,9 @@ any bioinformatic analysis can be run on the data, like the spatial clustering s
 </div></blockquote>
 </li>
 </ul>
+<p>DBiT and other spatial sequencing techniques are so useful, as they allow researchers to interrogate omics data without
+losing the spatial context they occur in. Our goal with AtlasXbrowser is to facilite DBiT sequencing within the research community
+and make these insights avaiable to a larger group of people.</p>
 </section>
 
 

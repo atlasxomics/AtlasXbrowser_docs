@@ -12,7 +12,7 @@ Learn more about `AtlasXomics`_.
 .. _AtlasXomics: https://www.atlasxomics.com
 
 .. toctree::
-   :maxdepth: 9
+   :maxdepth: 8
    :caption: Sections:
 
    Overview

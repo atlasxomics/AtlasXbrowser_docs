@@ -1,32 +1,24 @@
 Overview
 _________
 
-AtlasXbrowser was built to help facilite the workflow of DBiT-sequencing. The problem AtlasXbrowser 
-specifically solves is the conversion of tissue images into data that can be inputted directly
-into a bioinformatics pipeline. 
+AtlasXbrowser was built to help facilite the image processing aspect of the DBiT-seq workflow. Taking in both a brightfied and epifluorescent image of the chipped tissue, AtlasXbrowser 
+guides the user through the steps necessary to generate a "Spatial Folder". This folder contains the output of the image processing in 10x Visium image data format,
+allowing for easy incorporation into bioinformatics packages used in spatial seq analysis. 
 
-.. figure:: /images/AtlasBrowser_Figure.png
+.. figure:: /images/UpdatedFigure.png
 
-As displayed in the image above, once images of the DBiT slide are prepared, the images are run through AtlasXbrowser
-while the slide is sent off to be sequenced in paralell. Once the sequencing is preformed and all necessary insights
-AtlasXbrowser have been obtained, both can be loaded back into the broswer to observe how the reads map onto the image.
-From here any bioinformatic analysis can be preformed on the spatial data, such that UMAP or spatial clustering.
-
-
-The two primary pieces of information AtlasXbrowser seeks to obtain are the coordinates of the four corners that
-define the Region of Interest, as well as deliniating which sites of the image correspond to biological tissue.
-
-AtlasXbrowser requires the loading of images taken of a glass slide from a DBiT Spatial Sequencing experiment.
+As seen in the figure above, following the removal of the B chip and flowing of fluorescently stained BSA, the images are taken. From here they 
+are loaded into AtlasXbrowser, and prepared for sequencing in paralell. On the image processing side, AtlasXbrowser guides the user through identifying the Region of Interest (ROI) corresponding, to 
+the section of tissue in which Chip A and B channels overlap. Following this the image is binarized using adaptive thresholding, and AtlasXbrowser uses this to predict which regions of the image correspond to biological tissue and which do not. 
+With on and off tissue sites delineated, the Spatial Folder corresponding to that particular run can be created.
+While the image processing in AtlasXbrowser is occuring, tissue containing the DBiT barcodes is able to be sequenced. Once that data is generated, it can be coupled with the information
+of the Spatial Folder to preform bioinformatic analysis. As seen on the right of the image, examples of this include UMAP or Spatial Clustering.
+Also at this point, once the reads of the tissue are obtained, the obtained counts in conjunction with the spatial folder can also be loaded back into AtlasXbrowser, to both make adjustments about what is considered on
+and off tissue, and preform quality control on the DBiT run.
 
 From a distance a DBiT run works by:
 
 * Adhering tissue sample of interest to glass slide.
-
-   .. figure:: /images/TissueOnSlide.png
-      :width: 300
-      
-      The tissue which DBiT sequencing is to be preformed on is fixed onto a glass
-      slide in preparation for the procedure.
 
 * Clamping chip A ontop of slide and flowing Chip A barcodes through tissue.
 
@@ -67,3 +59,6 @@ From a distance a DBiT run works by:
 
    .. figure:: /images/SpatialClustering.png
 
+DBiT and other spatial sequencing techniques are so useful, as they allow researchers to interrogate omics data without
+losing the spatial context they occur in. Our goal with AtlasXbrowser is to facilite DBiT sequencing within the research community 
+and make these insights avaiable to a larger group of people. 

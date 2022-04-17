@@ -1,11 +1,12 @@
 Image Configuration
 ___________________
 
-Now that the image is loaded into the browser and the relevent Metadata has been given,
-we can begin properly configuring the image.
+Now that the images are loaded into the browser, we can begin processing them.
 
 Cropping the Image
 ###################
+
+In order to make the computational demands of future steps less intensive, the unnecessary excess in the image can be cropped out.
 
 1.) Navigate to and click **Activate** under the **Cropping** tab on the right side of the screen.
 

@@ -1,9 +1,9 @@
-ThresholdingT
-_____________
+Thresholding
+____________
 
-In order to determine purely from the image, which regions correspond to biological tissue and which do not
-we use adaptive thresholding to convert each pixel to either be black or white. From there we can make infrences, based
-on the number of black vs. white pixels as to whether a given region on the screen is ontop of tissue, or not.
+In order to determine purely from the image, which regions correspond to biological tissue and which do not,
+we use adaptive thresholding to binarize the image by converting each pixel to either be black or white. From there we can make inferences, based
+on the number of black vs. white pixels within a given tixel, as to whether a given tixel is ontop of tissue, or not.
 
 To understand this process it is useful to remember that a digital image is a essentially a grid of pixels, each taking on
 a discrete color. Each pixel can take on one of :math:`2^8` different possibilites, with values from 0 to 255. Where a pixel
@@ -19,6 +19,10 @@ Tuning Parameters
 #. Navigate to the **Adaptive Thresholding** tab on the right side of the screen and select **Activate.**
 
 #. Slide the **BlockSize** slider and **C** slider to find the optimal gradient between the sections of the images corresponding to tissue and those not. Use the examples below as a guide for this process.
+
+   .. figure:: /images/AdjustedThreshold.png
+
+      Use the two sliders pointed to above and create a contrast between the regions of the image that are on vs. off tissue.
 
    * The BlockSize and C parameters are used to calculate the local pixel intensity threshold which divides pixels to be turned black to those turned white.
    

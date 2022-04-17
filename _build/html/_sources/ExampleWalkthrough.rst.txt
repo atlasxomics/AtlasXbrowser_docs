@@ -10,10 +10,7 @@ _______________
 
     #. Select **File** in the first row labled "Select BSA Image", and navigate to the directory of your image folder and select the BSA image.
     #. Select **File** in the second row labled "Select postB Image" from the same image folder, select the postB image.
-    #. Enter the unique identifier you would like to you for this run in the textbox labeled, "Run ID".
-    #. Select the number of channels present on the chips being used for the DBiT. Here we are using 50 channel chips.
-    #. Select the barcode orientation setting, corresponding to how the chip was placed on the tissue. Here we are selecting 1.
-
+    #. Enter the unique ID you want associated with this particular run.
 
     Once entered select **Submit** at the bottom of the pop-up window.
     Now the BSA image should be displayed in the browser, as shown below.
@@ -54,11 +51,13 @@ _______________
 
       This an an example of **blocksize** and **C** settings which produce good contrast within the image.
 
-#. Once the sliders under the **Adaptive Thresholding** tab have been configured, and there is high contrast between the light and dark regions of the image, begin the process of ROI location by selecting **Activate**, under the **Locating ROI** tab.
+#. Once the sliders under the **Adaptive Thresholding** tab have been configured, and there is high contrast between the light and dark regions of the image, select **Confirm**, within the same Adaptive Thresholding window. 
+
+#. Begin the process of ROI location by selecting **Activate**, under the **Locating ROI** tab.
 
 #. Unlike when cropping the image previously, here we must be precise about the determination of the ROI. Drag the red rectangle to the borders of the ROI, created by the BSA staining on the image.
 
-    .. figure:: /images/PlacingROILines.png
+    .. figure:: /images/ProperlyPlacedROILines.png
 
         In order to indify the ROI the user must drag the corners of this red square to the outside of the fluorescent lines.
 
@@ -76,10 +75,6 @@ _______________
 
     * Check to ensure that the tixels on the outer channels of image, both horizontal and vertical, align with the BSA staining.
 
-        .. figure:: /images/OutlinedROILocation.png
-
-           The blue rectangles in the image above refer to the outer channels of the image which should be aligned with the BSA.
-
     * If the tixels are not aligned, navigate to the **Locating ROI** tab and re-select **Activate** to allow for edits to the chosen ROI region.
 
     * Within the **Overlay** tab there is also a button labeled, **Tixels**. This allows the tixels to be displayed over the thresholded image.
@@ -88,11 +83,11 @@ _______________
 
 #. At this point, the thresholded image, overlayed with the tixel grid, should be displayed on screen. The tixels should either be filled in red or remain clear.
 
+    .. figure:: /images/ClassifyingTixels.png
+
     * What is currently displayed on screen are the classifications that AtlasXbrowser made based on the Adaptive Thresholding step, for which tixels are on top of biological tissue and which are not.
 
-    * You are now able to review the decisions that AtlasXbrowser made and change them as you see fit.
-
-    * To change the state of the tixels, select one of the options from the list of:
+    * You are now able to review the decisions that AtlasXbrowser made and change them as you see fit. To change the state of the tixels, select one of the options from the list of:
 
         * *Point (flip)* which changes the state of whatever tixel is clicked on.
 

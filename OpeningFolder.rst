@@ -4,22 +4,20 @@ _____________________
 Image Specifications and Fluorescent Staining
 ##############################################
 
-The image which is to be loaded into AtlasXbrowser should be taken following the removal of the B chip
-from the glass slide.
-
-While using AtlasXbrowser the user will be prompted to locate the ROI of the image corresponding to the region
-in which the A and B chips overlap. This is made much easier by flowing Bovine Serum Albumin (BSA) solution mixed with 
-fluorescent dye through the outside channels of both the A and B chip. These fluorescent colors will make is visually very
+An important step in the image processing done by AtlasXbrowser, is the location of the ROI (Region of Interest) of the image, corresponding to the section
+of tissue which the A and B chips overlap. This is made much easier by flowing Bovine Serum Albumin (BSA) solution mixed with 
+fluorescent dye through the outside channels of both the A and B chips. These fluorescent colors will make is visually very
 clear where the overlap of the two chips are, it is will be enclosed by this colored square.
 
 *Note:* We reccomend using two different colors of fluorescent dye on each chip to allow for easy orientation
 of the image once it has been rotated.
 
-The two images required for processing are the BSA and postB images.
+The two images required for processing are the BSA and postB images. These can be taken following the removal of the B chip, and after fluorescently stained BSA
+is flown through the outside channels of the chips.
 
-**BSA Image:** Image taken with the microscope following the flowing of BSA solution through the outside channels of the chips.
+**BSA Image:** Image taken using the epifluorescence setting of the microscope.
 
-**postB Image:** Brightfield version of the BSA image, also taken, following the removal of the B-chip.
+**postB Image:** Image taken using the brightfield setting of the microscope.
 
     .. figure:: /images/Both_images.png
        
@@ -64,13 +62,9 @@ of the image folder, and select the BSA image.
 
 **3.)** Enter the desired name of the run in the textbox.
 
-**4.)** Select the number of channels on the chips being used. This will either be 50 or 100.
+**4.)** Once the images have been loaded in without error, and the run ID entered, select **Submit** to continue with the image processing.
 
-**5.)** Select the barcode orientation used in the experiment.
-
-**6.)** Once the images have been loaded in without error, and information entered, select **Submit** to continue with the image processing.
-
-Upon selecting **Submit**, the popup should dissapear and the BSA image should be loaded into the main window of the Browser.
+Upon selecting **Submit**, the popup should dissapear and the BSA image loaded into the main window of the Browser.
 
 This metadata will be saved and stored in the associated Spatial Folder for this experiment.
 Now we can proceed to configuring the image.
