@@ -39,6 +39,20 @@ new folder pertaining this particular run which will store these two images, and
 
 See above how a new folder was created, storing the BSA and postB images to be used by AtlasXbrowser.
 
+Specifying Barcode Folder
+#########################
+
+Knowing the nucleotide sequence corresponding to each channel in both and A and B chip is essential. To allow
+for this AtlasXbrowser requires the loading of a Barcode File. This is a .txt file that contains the unique barcode identifer
+for each unique nucleotide barcode sequence.
+
+    .. image:: /images/barcodefile.png
+
+Above is an example of a barcode file for a DBiT run using 50 channel chips. As such there are 2500 lines, each one corresponding to the unique 16 nucleotides
+that define each tixel. With 8 of these coming from the one channel on the A chip and 8 coming from a channel on the B chip.
+
+The file used above can is named "bc50v1.txt" and be found on the AtlasXbrowser `Github`_. 
+
 Loading Image and Entering Metadata
 ###################################
 In order to begin processing the tissue image, the relevant images must be loaded in.
@@ -60,11 +74,18 @@ of the image folder, and select the BSA image.
 
 **2.)** Select **File** in the second row, labeled "Select postB Image". Navigate to the image folder, and select the postB image.
 
-**3.)** Enter the desired name of the run in the textbox.
+**3.)** Select **File** in the third row, labeled "Select Barcode File". Navigate to and select the desired barcode file.
 
-**4.)** Once the images have been loaded in without error, and the run ID entered, select **Submit** to continue with the image processing.
+*Note:** While the barcode file does not need to be stored in the same image folder, it can be helpful to place it there for ease of navigation.
+
+**4.)** Enter the desired name of the run in the textbox.
+
+**5.)** Once the images have been loaded in without error, and the run ID entered, select **Submit** to continue with the image processing.
 
 Upon selecting **Submit**, the popup should dissapear and the BSA image loaded into the main window of the Browser.
 
 This metadata will be saved and stored in the associated Spatial Folder for this experiment.
 Now we can proceed to configuring the image.
+
+
+.. _Github: https://github.com/atlasxomics/AtlasXbrowser.git

@@ -44,6 +44,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Loading Tissue images</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#image-specifications-and-fluorescent-staining">Image Specifications and Fluorescent Staining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#image-folder-specifications">Image Folder Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#specifying-barcode-folder">Specifying Barcode Folder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-image-and-entering-metadata">Loading Image and Entering Metadata</a></li>
 </ul>
 </li>
@@ -114,6 +115,18 @@ new folder pertaining this particular run which will store these two images, and
 </div></blockquote>
 <p>See above how a new folder was created, storing the BSA and postB images to be used by AtlasXbrowser.</p>
 </section>
+<section id="specifying-barcode-folder">
+<h2>Specifying Barcode Folder<a class="headerlink" href="#specifying-barcode-folder" title="Permalink to this headline"></a></h2>
+<p>Knowing the nucleotide sequence corresponding to each channel in both and A and B chip is essential. To allow
+for this AtlasXbrowser requires the loading of a Barcode File. This is a .txt file that contains the unique barcode identifer
+for each unique nucleotide barcode sequence.</p>
+<blockquote>
+<div><img alt="_images/barcodefile.png" src="_images/barcodefile.png" />
+</div></blockquote>
+<p>Above is an example of a barcode file for a DBiT run using 50 channel chips. As such there are 2500 lines, each one corresponding to the unique 16 nucleotides
+that define each tixel. With 8 of these coming from the one channel on the A chip and 8 coming from a channel on the B chip.</p>
+<p>The file used above can is named “bc50v1.txt” and be found on the AtlasXbrowser <a class="reference external" href="https://github.com/atlasxomics/AtlasXbrowser.git">Github</a>.</p>
+</section>
 <section id="loading-image-and-entering-metadata">
 <h2>Loading Image and Entering Metadata<a class="headerlink" href="#loading-image-and-entering-metadata" title="Permalink to this headline"></a></h2>
 <p>In order to begin processing the tissue image, the relevant images must be loaded in.</p>
@@ -143,8 +156,10 @@ new folder pertaining this particular run which will store these two images, and
 <p><strong>1.)</strong> Select <strong>File</strong> in the first row of the pop-up titled, “Select BSA Image”. Then navigate to the directory
 of the image folder, and select the BSA image.</p>
 <p><strong>2.)</strong> Select <strong>File</strong> in the second row, labeled “Select postB Image”. Navigate to the image folder, and select the postB image.</p>
-<p><strong>3.)</strong> Enter the desired name of the run in the textbox.</p>
-<p><strong>4.)</strong> Once the images have been loaded in without error, and the run ID entered, select <strong>Submit</strong> to continue with the image processing.</p>
+<p><strong>3.)</strong> Select <strong>File</strong> in the third row, labeled “Select Barcode File”. Navigate to and select the desired barcode file.</p>
+<p><em>Note:*</em> While the barcode file does not need to be stored in the same image folder, it can be helpful to place it there for ease of navigation.</p>
+<p><strong>4.)</strong> Enter the desired name of the run in the textbox.</p>
+<p><strong>5.)</strong> Once the images have been loaded in without error, and the run ID entered, select <strong>Submit</strong> to continue with the image processing.</p>
 <p>Upon selecting <strong>Submit</strong>, the popup should dissapear and the BSA image loaded into the main window of the Browser.</p>
 <p>This metadata will be saved and stored in the associated Spatial Folder for this experiment.
 Now we can proceed to configuring the image.</p>
