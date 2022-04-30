@@ -1,8 +1,7 @@
 Installation
 ------------
 
-Before running AtlasXbrowser, the software must be available to run on your local machine.
-Luckily the codebase for AtlasXbrowser is open source and freely hosted on Github, `AtlasXbrowser`_.
+To use AtlasXbrowser, please download the most recent release: https://github.com/atlasxomics/AtlasXbrowser/releases. Executable file (AtlasXbrowser.tgz) is available for Mac OSX. Follow steps below if you prefer to run AtlasXbrowser as a python application from source code.
 
 Downloading
 ###########
