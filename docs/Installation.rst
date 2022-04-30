@@ -7,7 +7,7 @@ Luckily the codebase for AtlasXbrowser is open source and freely hosted on Githu
 Downloading
 ###########
 
-* Open a terminal window and navigate to the directory where you want to download Atlas Browser to.
+* Open a terminal window and navigate to the directory where you want to download AtlasXbrowser to.
 
 * Run the following commands into the terminal:
 
