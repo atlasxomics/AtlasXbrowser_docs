@@ -8,7 +8,7 @@ Cropping the Image
 
 In order to make the computational demands of future steps less intensive, the unnecessary excess in the image can be cropped out.
 
-1.) Navigate to and click **Activate** under the **Cropping** tab on the right side of the screen.
+1.) Navigate to and click **Activate** under the **Cropping** tab on the right side of the screen. A red square will be shown.
 
 2.) Use your mouse to drag the red square to encapsulate the section of the image enclosed in the neon box. Leave excess space 
 between the neon lines on the image and the cropping box's red lines.
@@ -31,8 +31,7 @@ As long as the entire neon outlined ROI is contained within the area of the red 
 
 Rotating the Image
 ##################
-The use of different technologies to capture these images results in various orientation changes of the images.
-This rotation section of the program allows images to be reconfigured to the orientation used when the chip was placed.
+The use of different microscopes to capture these images results in various orientation changes of the images. This rotation section of the program allows images to be reconfigured to the orientation used when the chip was placed.
 
 #. Navigate to the **Rotation** tab on the right side of the screen and utilize the four buttons described below to re-orient the image. Each button can be clicked as many times as desired.
 
