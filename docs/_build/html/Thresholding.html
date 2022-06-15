@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -79,7 +80,7 @@
            <div itemprop="articleBody">
              
   <section id="thresholding">
-<h1>Thresholding<a class="headerlink" href="#thresholding" title="Permalink to this headline"></a></h1>
+<h1>Thresholding<a class="headerlink" href="#thresholding" title="Permalink to this heading"></a></h1>
 <p>In order to determine purely from the image, which regions correspond to biological tissue and which do not,
 we use adaptive thresholding to binarize the image by converting each pixel to either be black or white. From there we can make inferences, based
 on the number of black vs. white pixels within a given tixel, as to whether a given tixel is ontop of tissue, or not.</p>
@@ -90,7 +91,7 @@ convert that image into one where each pixel either has the value of 0 or 255.</
 <p>This is all done under the assumption that parts of the image corresponding to biological tissue will be darker than the rest of the
 slide, so in an ideal outcome, all biological tissue is designated as black and everything else is classifed as white.</p>
 <section id="tuning-parameters">
-<h2>Tuning Parameters<a class="headerlink" href="#tuning-parameters" title="Permalink to this headline"></a></h2>
+<h2>Tuning Parameters<a class="headerlink" href="#tuning-parameters" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Navigate to the <strong>Adaptive Thresholding</strong> tab on the right side of the screen and select <strong>Activate.</strong></p></li>
 <li><p>Slide the <strong>BlockSize</strong> slider and <strong>C</strong> slider to find the optimal gradient between the sections of the images corresponding to tissue and those not. Use the examples below as a guide for this process.</p>
@@ -131,7 +132,7 @@ slide, so in an ideal outcome, all biological tissue is designated as black and 
 </ol>
 </section>
 <section id="thresholding-examples">
-<h2>Thresholding Examples<a class="headerlink" href="#thresholding-examples" title="Permalink to this headline"></a></h2>
+<h2>Thresholding Examples<a class="headerlink" href="#thresholding-examples" title="Permalink to this heading"></a></h2>
 <figure class="align-default" id="id2">
 <img alt="_images/darkthreshold_D223.png" src="_images/darkthreshold_D223.png" />
 <figcaption>

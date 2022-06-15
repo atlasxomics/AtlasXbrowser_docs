@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -79,14 +80,14 @@
            <div itemprop="articleBody">
              
   <section id="characterizing-region-of-interest">
-<h1>Characterizing Region of Interest<a class="headerlink" href="#characterizing-region-of-interest" title="Permalink to this headline"></a></h1>
+<h1>Characterizing Region of Interest<a class="headerlink" href="#characterizing-region-of-interest" title="Permalink to this heading"></a></h1>
 <p>In this stage of the image processing, we want to narrow in on the <em>Region of Interest</em> or <em>ROI</em> of the tissue.
 This is the region in which the barcodes flown from chip A  overlap with the barcodes flown from chip B, allowing for the preservation of spatial information.
 Each region on the slide which has a unique combination of barcodes from chip A, as well as barcodes from chip B, is called a <strong>Tixel</strong>. During a DBiT-seq experiment,
 a grid of tixels is created on the slide. For each one of these tixels, with the knowledge of which channel each barcode sequence comes from, the unique combination of barcodes
 from an A chip and B chip channel, serve as X and Y coordinates used to map sequencing reads back to their proper spatial orientation on the tissue.</p>
 <section id="locating-roi">
-<h2>Locating ROI<a class="headerlink" href="#locating-roi" title="Permalink to this headline"></a></h2>
+<h2>Locating ROI<a class="headerlink" href="#locating-roi" title="Permalink to this heading"></a></h2>
 <p>During this step we want to define the region of interest for the browser. This step is made much easier if the
 outside channels of the chip have BSA fluid with stained dye within them. As then the ROI corresponds to the square created
 by the overlap of these neon channels.</p>
@@ -114,7 +115,7 @@ designating the ROI. In practice, this means the ideal placement of the red box 
 </ol>
 </section>
 <section id="overlaying-tixels">
-<h2>Overlaying Tixels<a class="headerlink" href="#overlaying-tixels" title="Permalink to this headline"></a></h2>
+<h2>Overlaying Tixels<a class="headerlink" href="#overlaying-tixels" title="Permalink to this heading"></a></h2>
 <p>To check the work done in the last step, we must ensure that the alignment of the tixels on the image are as expected.
 The visualization of the tixels corresponds to how the ROI was discerned in the previous step.</p>
 <ul>
@@ -137,7 +138,7 @@ The visualization of the tixels corresponds to how the ROI was discerned in the 
 </ul>
 </section>
 <section id="acivating-tixels">
-<h2>Acivating Tixels<a class="headerlink" href="#acivating-tixels" title="Permalink to this headline"></a></h2>
+<h2>Acivating Tixels<a class="headerlink" href="#acivating-tixels" title="Permalink to this heading"></a></h2>
 <p>Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically predicts which tixels are over tissue and which are not.
 In this step you can examine the image and modify any of the classifications AtlasBrower made.</p>
 <ol class="arabic">

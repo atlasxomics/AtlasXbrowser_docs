@@ -57,7 +57,11 @@ of the image folder, and select the BSA image.
 
 **2.)** Select **File** in the second row, labeled "Select postB Image". Navigate to the image folder, and select the postB image.
 
-**3.)** Select **File** in the second row, labeled "Select Barcode File". Navigate to the folder with the barcode file (e.g. bc50v1.txt), and select the barcode file.
+**3.)** This button is used to select a custom barcode file. Automatically the default of the bc50v1 barcode file is selected. To Change this, select the button and navigate to the desired custom barcode file.
+
+    .. image:: /images/image_processing_revert.png
+
+    Upon selecting a custom barcode file, if the user wants to revert to the default bc50v1 file, they can select the **Revert to bc50v1** circled above.
 
 **4.)** Enter the desired name of the run (or data set) in the textbox.
 
