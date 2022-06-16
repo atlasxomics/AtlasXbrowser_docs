@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Wed Jun 15 17:42:24 2022
+# Make data base, printed on Wed Jun 15 20:42:34 2022
 
 # Variables
 
@@ -40,7 +40,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/qz/r2wj364n18j6cln2k1dp44b00000gn/T/vscode-ipc-975b7f07-56c3-4a4b-9745-1028b32fa931.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/qz/r2wj364n18j6cln2k1dp44b00000gn/T/vscode-ipc-41a67e71-df2a-4791-ad49-1dca4017161a.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -76,7 +76,7 @@ VSCODE_CODE_CACHE_PATH = /Users/jonah/Library/Application Support/Code/CachedDat
 # environment
 LOGNAME = jonah
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 CONDA_PROMPT_MODIFIER = (base) 
 # environment
@@ -154,7 +154,7 @@ MAKELEVEL := 0
 # environment
 CONDA_PREFIX = /Users/jonah/opt/anaconda3
 # environment
-VSCODE_PID = 32943
+VSCODE_PID = 90336
 # environment
 _CE_CONDA = 
 # environment
@@ -242,7 +242,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Jun 15 17:42:24 2022
+# Finished Make data base on Wed Jun 15 20:42:34 2022
 
  
 make: *** No rule to make target `all'.  Stop.

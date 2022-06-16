@@ -44,24 +44,6 @@ Tuning Parameters
 
 
 
-      .. 
-         .. figure:: /images/LargeBlockSize.png
-         :scale: 40%
-         :align: center
-
-          With too large a block size the local fluxuations in lighting are not taken into account, generally leading to poor classification.
-
-
-         .. figure:: /images/LowBlockSize.png
-            :scale: 40%
-            :align: center
-
-            Having too low a block size leads to many dark pixels being classified as white due to only being compared to the other dark pixels closeby to them.
-
-
-
-
-
 
 #. Once the gradient of the image is configured as desired, select the *Confirm* button within the *Adaptive Thresholding* tab.
 

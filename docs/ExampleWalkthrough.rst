@@ -34,8 +34,6 @@ _______________
         * |rotate_left| Rotates the image 90 degrees counter clockwise.
         * |rotate_right| Rotates the image 90 degrees clockwise.
 
-    .. |rotate_right| image:: /images/rotateright.png
-    .. |rotate_left| image:: /images/rotateleft.png
 
 
 #. Once the image is rotated as desired, proceed to the pixel thresholding step by selecting **Activate** under the **Adaptive Thresholding** tab.
