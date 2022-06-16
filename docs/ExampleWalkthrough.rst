@@ -30,11 +30,12 @@ _______________
 #. Now we have the opportunity to rotate the image as necessary. For this image, no rotations are required. However there is no harm in using the rotation buttons as they can always work to re-orient the image back to its original state.
 
     If it is necissary to rotate the image the following buttons can be selected as many times as desired. Rotate using the following buttons:
-
+    
         * |rotate_left| Rotates the image 90 degrees counter clockwise.
         * |rotate_right| Rotates the image 90 degrees clockwise.
 
-
+    .. |rotate_right| image:: /images/rotateright.png
+    .. |rotate_left| image:: /images/rotateleft.png
 
 #. Once the image is rotated as desired, proceed to the pixel thresholding step by selecting **Activate** under the **Adaptive Thresholding** tab.
 

@@ -9,7 +9,7 @@ allowing for easy incorporation into bioinformatics packages used in spatial seq
 
 As seen in the figure above, following the removal of the B chip and flowing of fluorescently stained BSA, the images are taken. From here they 
 are loaded into AtlasXbrowser, and prepared for sequencing in paralell. On the image processing side, AtlasXbrowser guides the user through identifying the Region of Interest (ROI) corresponding, to 
-the section of tissue in which Chip A and B channels overlap. Following this the image is binarized using adaptive thresholding, and AtlasXbrowser uses this to predict which regions of the image correspond to biological tissue and which do not. 
+the section of tissue in which Chip A and B channels overlap. Following this, the image is binarized using adaptive thresholding, creating a black and white version of the image. Using the binarized image, AtlasXbrowser predicts which regions of the image correspond to biological tissue and which do not. 
 With on and off tissue sites delineated, the Spatial Folder corresponding to that particular run can be created.
 While the image processing in AtlasXbrowser is occuring, tissue containing the DBiT barcodes is able to be sequenced. Once that data is generated, it can be coupled with the information
 of the Spatial Folder to preform bioinformatic analysis. As seen on the right of the image, examples of this include UMAP or Spatial Clustering.
@@ -51,8 +51,7 @@ From a distance a DBiT run works by:
       
       As neither step is reliant on the other, AtlasXbrowser can be used to generate information about the image
       such as the metadata corresponding to the experiment, the boundaries of the overlapping A and B chips, and
-      classification of on and off tissue sites of the image, while the particular assay being run on the tissue
-      can be sequenced. 
+      classification of on and off tissue sites of the image, during, before, or after the tissue is sequenced.
 
 * Using the results of the sequencing in conjunction with the spatial information encoded by the DBiT process,
   any bioinformatic analysis can be run on the data, like the spatial clustering shown below.

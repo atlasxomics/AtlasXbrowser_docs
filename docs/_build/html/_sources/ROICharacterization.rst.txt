@@ -37,13 +37,15 @@ Overlaying Tixels
 To check the work done in the last step, we must ensure that the alignment of the tixels on the image are as expected.
 The visualization of the tixels corresponds to how the ROI was discerned in the previous step.
 
-* The **Locating ROI** tab allows the placement of the tixels to be visualized on top of the images.
+There are three options for the image to be set as the backgronud. As defined by the buttons in the **Overlay** section on the righthand side of the screen.
 
-    * Select the **Tixels** button to observe how the tixels are overlayed ontop of the binarized image.
+.. figure:: /images/grid_options.png
 
-    * Select the **BSA** button to view the tixels overlayed onto the cropped BSA stained image.
+   The **BW** corresponds to the binarized black and white image, the **postB** option is the greyscale image, and **BSA** corresponds to the fluoescently stained brightfield image.
 
-    *Note:* One way to check the placement of the ROI is to ensure that the outer rows and columns of the BSA image align with the BSA lines of the image, as shown below.
+* The **Locating ROI** tab allows the placement of the tixels to be visualized on top of the images. Select any of the buttons from the figure above to observe how the tixels are overlayed on top of the tissue.
+
+    *Note:* One way to ensure the proper placement of the ROI is to select the **BSA** image, and ensure that the outer rows and columns of the grid align with the fluoresence as shown below.
     
     .. figure:: /images/ProperlyPlacedROI.png
 
