@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Thu Jun 16 12:57:52 2022
+# Make data base, printed on Fri Jun 17 14:56:30 2022
 
 # Variables
 
@@ -43,7 +43,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/qz/r2wj364n18j6cln2k1dp44b00000gn/T/vscode-ipc-fdb1aa8c-f04d-4e8c-9ba0-4d104239ec41.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/qz/r2wj364n18j6cln2k1dp44b00000gn/T/vscode-ipc-68ab7ef0-d666-4fb7-bf2f-9c8b4d7afd0e.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -153,6 +153,7 @@ _CE_M =
 # default
 .INCLUDE_DIRS = /usr/local/include
 # environment
+ 
 MAKELEVEL := 0
 # environment
 CONDA_PREFIX = /Users/jonah/opt/anaconda3
@@ -245,6 +246,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Thu Jun 16 12:57:52 2022
+# Finished Make data base on Fri Jun 17 14:56:30 2022
 
  
