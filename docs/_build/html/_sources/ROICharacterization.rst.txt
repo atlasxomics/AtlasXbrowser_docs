@@ -41,7 +41,7 @@ There are three options for the image to be set as the backgronud. As defined by
 
 .. figure:: /images/grid_options.png
 
-   The **BW** corresponds to the binarized black and white image, the **postB** option is the greyscale image, and **BSA** corresponds to the image taken using the epifluorescent microscope setting.
+   The **BW** corresponds to the binarized black and white image, the **postB** option is the brightfield image, and **BSA** corresponds to the image taken using the epifluorescent microscope setting.
 
 * The **Locating ROI** tab allows the placement of the tixels to be visualized on top of the images. Select any of the buttons from the figure above to observe how the tixels are overlayed on top of the tissue.
 

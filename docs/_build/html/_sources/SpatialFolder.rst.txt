@@ -17,7 +17,7 @@ Once the image has been processed using AtlasXbrowser, the relevent information 
 
         * Coordinates of the form x\ :sub:`1`\, y\ :sub:`1`\, x\ :sub:`2`\, y\ :sub:`2`\, x\ :sub:`3`\, y\ :sub:`3`\, x\ :sub:`4`\, y\ :sub:`4`\ corresponding to the four corners of the ROI of the image.
 
-        * The information chosen about pixel thresholding, including **BlockSize** and **threshold value**.
+        * The information chosen about pixel thresholding, including **BlockSize** and **threshold value**. With threshold correponding to the value on the C parameter.
 
         * The number of on-tissue tixels within the image.
 
