@@ -8,8 +8,8 @@ _______________
 
 #. Once a popup has appeared:
 
-    #. Select **File** in the first row labled "Select BSA Image", and navigate to the directory of your image folder and select the BSA image.
-    #. Select **File** in the second row labled "Select PostB Image" from the same image folder, select the PostB image.
+    #. Select **File** in the first row labeled "Select BSA Image", and navigate to the directory of your image folder and select the BSA image.
+    #. Select **File** in the second row labeled "Select PostB Image" from the same image folder, select the PostB image.
     #. Enter the unique ID you want associated with this particular run.
 
     Once entered select **Submit** at the bottom of the pop-up window.
@@ -19,7 +19,7 @@ _______________
 
 #. Once the BSA image is loaded on screen the image can be rotated as desired. This particular image does not require rotation however there is no harm in using the rotation buttons as the image can always be re-oriented to its origin.
 
-#. Following rotation, the image must be cropped. Activate cropping by selecting **Acivate** within the **Cropping** section in the top right of the screen.
+#. Following rotation, the image must be cropped. Activate cropping by selecting **Activate** within the **Cropping** section in the top right of the screen.
 
 #. Drag the corners of the square to include the entire *Region of Interest*, defined by the fluorescently stained BSA lines.
 
@@ -46,7 +46,7 @@ _______________
 
     .. figure:: /images/ROILocated.png
 
-        In order to indentify the ROI the user must drag the corners of this red square to the outside of the fluorescent lines.
+        In order to identify the ROI the user must drag the corners of this red square to the outside of the fluorescent lines.
 
     *Note:* The dye is being run through channels of the chips, and as such must be included within this rectangle. The optimal placement of this rectangle is directly on the outside borders of the channels containing the BSA staining.
 
@@ -68,7 +68,7 @@ _______________
 
 #. Once it has been confirmed that the tixels are properly aligned to the BSA channels, select **Activate** under the **On/Off Tissue** tab.
 
-#. At this point, the thresholded image overlayed with the tixel grid, should be displayed on screen. The tixels should either be filled in red or remain clear.
+#. At this point, the thresholded image overlaid with the tixel grid, should be displayed on screen. The tixels should either be filled in red or remain clear.
 
     .. figure:: /images/ClassifyingTixels.png
 
