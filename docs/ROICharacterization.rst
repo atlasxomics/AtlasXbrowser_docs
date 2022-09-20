@@ -37,15 +37,15 @@ Overlaying Tixels
 To check the work done in the last step, we must ensure that the alignment of the tixels on the image are as expected.
 The visualization of the tixels corresponds to how the ROI was discerned in the previous step.
 
-There are three options for the image to be set as the backgronud. As defined by the buttons in the **Overlay** section on the righthand side of the screen.
+There are three options for the image to be set as the background. As defined by the buttons in the **Overlay** section on the right hand side of the screen.
 
 .. figure:: /images/grid_options.png
 
    The **BW** corresponds to the binarized black and white image, the **PostB** option is the brightfield image, and **BSA** corresponds to the image taken using the epifluorescent microscope setting.
 
-* The **Locating ROI** tab allows the placement of the tixels to be visualized on top of the images. Select any of the buttons from the figure above to observe how the tixels are overlayed on top of the tissue.
+* The **Locating ROI** tab allows the placement of the tixels to be visualized on top of the images. Select any of the buttons from the figure above to observe how the tixels are overlaid on top of the tissue.
 
-    *Note:* One way to ensure the proper placement of the ROI is to select the **BSA** image, and ensure that the outer rows and columns of the grid align with the fluoresence as shown below.
+    *Note:* One way to ensure the proper placement of the ROI is to select the **BSA** image, and ensure that the outer rows and columns of the grid align with the fluorescence as shown below.
     
     .. figure:: /images/ProperlyPlacedROI.png
 
@@ -54,8 +54,8 @@ There are three options for the image to be set as the backgronud. As defined by
 
 * If the placement of the ROI must be re-done for any reason, just re-select the **Activate** button in the **Locating ROI** tab and the red rectangle can be re-adjusted.
 
-Acivating Tixels
-################
+Activating Tixels
+##################
 
 Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically predicts which tixels are over tissue and which are not.
 In this step you can examine the image and modify any of the classifications AtlasXbrowser made.

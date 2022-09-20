@@ -3,7 +3,7 @@ ____________________________
 
 Examining Spatial Folder
 ########################
-Once the image has been processed using AtlasXbrowser, the relevent information will be stored within the Spatial Folder.
+Once the image has been processed using AtlasXbrowser, the relevant information will be stored within the Spatial Folder.
 
 #. Navigate through your file directories to the location in which the original images read into AtlasXbrowser are located.
 
@@ -17,7 +17,7 @@ Once the image has been processed using AtlasXbrowser, the relevent information 
 
         * Coordinates of the form x\ :sub:`1`\, y\ :sub:`1`\, x\ :sub:`2`\, y\ :sub:`2`\, x\ :sub:`3`\, y\ :sub:`3`\, x\ :sub:`4`\, y\ :sub:`4`\ corresponding to the four corners of the ROI of the image.
 
-        * The information chosen about pixel thresholding, including **BlockSize** and **threshold value**. With threshold correponding to the value on the C parameter.
+        * The information chosen about pixel thresholding, including **BlockSize** and **threshold value**. With threshold corresponding to the value on the C parameter.
 
         * The number of on-tissue tixels within the image.
 
@@ -58,7 +58,7 @@ In order to visualize both the number of UMI's and number of raw counts within a
 From here, navigated to under the **Visualization** tab, the user has three options to choose in what they want the browser
 to display.
 
-    * **Tixel:** This view is identical to the manual tixel delination step during image processing, with the states of these tixels taken directly from what was saved during image processing.
+    * **Tixel:** This view is identical to the manual tixel delineation step during image processing, with the states of these tixels taken directly from what was saved during image processing.
 
     * **Feature:** This setting colors each tixel according to a log transform of the number of unique genes mapped to that tixel.
 

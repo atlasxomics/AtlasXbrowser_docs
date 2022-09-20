@@ -95,11 +95,11 @@
 <section id="managing-dependencies">
 <h2>Managing Dependencies<a class="headerlink" href="#managing-dependencies" title="Permalink to this heading"></a></h2>
 <ul>
-<li><p>AtlasXbrowser requires the usage of Python 3.7 as well as the installation of multiple outside packages. For these reasons we HIGHLY reccomend the usage of a virtual enviroment, specifcally Anaconda.</p></li>
+<li><p>AtlasXbrowser requires the usage of Python 3.7 as well as the installation of multiple outside packages. For these reasons we HIGHLY recommend the usage of a virtual environment, specifically Anaconda.</p></li>
 <li><p>If an Anaconda distribution is not currently installed on your system see the installation guide here, <a class="reference external" href="https://docs.anaconda.com/anaconda/install/index.html">Anaconda</a>.</p>
 <blockquote>
 <div><ul>
-<li><p>To check that anaconda was properly installed open a Terminal window and check the version isntalled by running:</p>
+<li><p>To check that anaconda was properly installed open a Terminal window and check the version installed by running:</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
@@ -113,12 +113,12 @@
 </div>
 </div></blockquote>
 </li>
-<li><p>With conda installed with an up to date version, create a python 3.7 enviroment with the command:</p>
+<li><p>With conda installed with an up to date version, create a python 3.7 environment with the command:</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">py37</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span>
 </pre></div>
 </div>
-<p>Where “py37” can be any name of the enviroment.</p>
+<p>Where “py37” can be any name of the environment.</p>
 </div></blockquote>
 </li>
 <li><p>Once created, navigate to the directory where AtlasXbrowser is cloned to and run:</p>
@@ -129,15 +129,15 @@
 </div>
 </div></blockquote>
 </li>
-<li><p>To check this conda enviroment is running the proper python version run:</p>
+<li><p>To check this conda environment is running the proper python version run:</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 </div>
-<p>This should return Python 3.7.xx. If this is not the case, deactivate the conda enviroment using “conda deactivate’. Repeat this command until there is no conda enviorment listed at the left side of the terminal and then reactivate the enviroment.</p>
+<p>This should return Python 3.7.xx. If this is not the case, deactivate the conda environment using “conda deactivate’. Repeat this command until there is no conda environment listed at the left side of the terminal and then reactivate the environment.</p>
 </div></blockquote>
 </li>
-<li><p>To install all the necessary packages for AtlasXBrowser run the following commands in the activated conda enviroment.</p>
+<li><p>To install all the necessary packages for AtlasXBrowser run the following commands in the activated conda environment.</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">scipy</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">seaborn</span>

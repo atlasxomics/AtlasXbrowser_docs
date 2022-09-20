@@ -6,12 +6,12 @@ we use adaptive thresholding to binarize the image by converting each pixel to e
 on the number of black vs. white pixels within a given tixel, as to whether a given tixel is ontop of tissue, or not.
 
 To understand this process it is useful to remember that a digital image is a essentially a grid of pixels, each taking on
-a discrete color. Each pixel can take on one of :math:`2^8` different possibilites, with values from 0 to 255. Where a pixel
+a discrete color. Each pixel can take on one of :math:`2^8` different possibilities, with values from 0 to 255. Where a pixel
 of value 0 is black, and 255 is white. In this step we take the image, with pixels each ranging in intensity from values 0 to 255, and 
 convert that image into one where each pixel either has the value of 0 or 255. 
 
 This is all done under the assumption that parts of the image corresponding to biological tissue will be darker than the rest of the 
-slide, so in an ideal outcome, all biological tissue is designated as black and everything else is classifed as white.
+slide, so in an ideal outcome, all biological tissue is designated as black and everything else is classified as white.
 
 Tuning Parameters
 #################
@@ -38,7 +38,7 @@ Tuning Parameters
 
       *  Blocksize too small does not take enough of the image into account and so the threshold value are somewhat "overfit" to the region.
       
-   * **C** is a constant subtracted from this local mean regulating how far above or below the mean a pixel must be to recieve a white classification. 
+   * **C** is a constant subtracted from this local mean regulating how far above or below the mean a pixel must be to receive a white classification. 
 
       * Larger values of C directly decrease the threshold value, meaning more pixels will be above this value, and thus more pixels will be classified as white. As such, a C value too large, runs the risk of making the image too light, resulting in the classification of tissue as non-tissue.
 

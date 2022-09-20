@@ -18,13 +18,13 @@ Downloading
 Managing Dependencies
 #####################
 
-* AtlasXbrowser requires the usage of Python 3.7 as well as the installation of multiple outside packages. For these reasons we HIGHLY reccomend the usage of a virtual enviroment, specifcally Anaconda.
+* AtlasXbrowser requires the usage of Python 3.7 as well as the installation of multiple outside packages. For these reasons we HIGHLY recommend the usage of a virtual environment, specifically Anaconda.
 
 
 * If an Anaconda distribution is not currently installed on your system see the installation guide here, `Anaconda`_.
 
 
-   * To check that anaconda was properly installed open a Terminal window and check the version isntalled by running:
+   * To check that anaconda was properly installed open a Terminal window and check the version installed by running:
 
       .. code-block::
 
@@ -36,13 +36,13 @@ Managing Dependencies
 
       conda update conda
 
-* With conda installed with an up to date version, create a python 3.7 enviroment with the command:
+* With conda installed with an up to date version, create a python 3.7 environment with the command:
 
    .. code-block::
 
       conda create --name py37 python=3.7
 
-   Where "py37" can be any name of the enviroment.
+   Where "py37" can be any name of the environment.
 
 * Once created, navigate to the directory where AtlasXbrowser is cloned to and run:
 
@@ -52,15 +52,15 @@ Managing Dependencies
       conda activate py37
 
 
-* To check this conda enviroment is running the proper python version run:
+* To check this conda environment is running the proper python version run:
 
    .. code-block::
 
       python --version
 
-   This should return Python 3.7.xx. If this is not the case, deactivate the conda enviroment using "conda deactivate'. Repeat this command until there is no conda enviorment listed at the left side of the terminal and then reactivate the enviroment.
+   This should return Python 3.7.xx. If this is not the case, deactivate the conda environment using "conda deactivate'. Repeat this command until there is no conda environment listed at the left side of the terminal and then reactivate the environment.
 
-* To install all the necessary packages for AtlasXBrowser run the following commands in the activated conda enviroment.
+* To install all the necessary packages for AtlasXBrowser run the following commands in the activated conda environment.
 
    .. code-block::
 
