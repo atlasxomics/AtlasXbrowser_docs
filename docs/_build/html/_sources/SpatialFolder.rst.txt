@@ -47,7 +47,7 @@ While one can load in the spatial folder directly after it is created by AtlasXb
 re-doing the step in which a user manually identifies tixels as on or off tissue, following the predictions made by AtlasXbrowser.
 
 In order to visualize both the number of UMI's and number of raw counts within a tixel, a user must generate a file titled
-*tissue_positions_list_log_UMI_Genes.csv*. This file is identical to the 
+*tissue_positions_list_log_UMI_Genes.csv*. This file is identical to the standard tissue_position_list file except it contains two added columns. Log of counts and log of UMIs.
 
 
 1.) Select **File**, then **Open Spatial Folder**

@@ -20,9 +20,11 @@ Tuning Parameters
 
 #. Slide the **BlockSize** slider and **C** slider to find the optimal gradient between the sections of the images corresponding to tissue and those not. Use the examples below as a guide for this process.
 
+   .. figure:: /images/threshold_sliders.png
+   
    .. figure:: /images/AdjustedThreshold.png
 
-      Use the two sliders pointed to above and create a contrast between the regions of the image that are on vs. off tissue.
+     The contrast in this binarized black and white image is optimized using the sliders controlling C value and blocksize parameters.
 
    * The BlockSize and C parameters are used to calculate the local pixel intensity threshold which divides pixels to be turned black to those turned white.
    

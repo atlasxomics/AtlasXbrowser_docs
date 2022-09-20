@@ -41,7 +41,7 @@ There are three options for the image to be set as the backgronud. As defined by
 
 .. figure:: /images/grid_options.png
 
-   The **BW** corresponds to the binarized black and white image, the **postB** option is the brightfield image, and **BSA** corresponds to the image taken using the epifluorescent microscope setting.
+   The **BW** corresponds to the binarized black and white image, the **PostB** option is the brightfield image, and **BSA** corresponds to the image taken using the epifluorescent microscope setting.
 
 * The **Locating ROI** tab allows the placement of the tixels to be visualized on top of the images. Select any of the buttons from the figure above to observe how the tixels are overlayed on top of the tissue.
 
@@ -58,7 +58,7 @@ Acivating Tixels
 ################
 
 Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically predicts which tixels are over tissue and which are not.
-In this step you can examine the image and modify any of the classifications AtlasBrower made.
+In this step you can examine the image and modify any of the classifications AtlasXbrowser made.
 
 #. Select **Activate** under the **On/Off Tissue** tab on the right side of the screen. 
 

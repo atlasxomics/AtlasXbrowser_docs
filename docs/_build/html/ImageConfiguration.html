@@ -44,8 +44,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OpeningFolder.html">Loading Tissue images</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Image Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cropping-the-image">Cropping the Image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rotating-the-image">Rotating the Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cropping-the-image">Cropping the Image</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Thresholding.html">Thresholding</a></li>
@@ -81,6 +81,19 @@
   <section id="image-configuration">
 <h1>Image Configuration<a class="headerlink" href="#image-configuration" title="Permalink to this heading"></a></h1>
 <p>Now that the images are loaded into the browser, we can begin processing them.</p>
+<section id="rotating-the-image">
+<h2>Rotating the Image<a class="headerlink" href="#rotating-the-image" title="Permalink to this heading"></a></h2>
+<p>The use of different microscopes or different chip orientations results in various orientational changes required of the images. This rotation section of the program allows images to be rotated into their desired orientation.</p>
+<p>1.) Navigate to the <strong>Rotation</strong> tab on the right side of the screen and find the rotation options available. AtlasXbrowser supports both 45 and 90 degree rotations.</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="_images/LabeledRotation.png" src="_images/LabeledRotation.png" />
+</figure>
+</div></blockquote>
+<p>2.) Use the radio buttons (labeled 1 and 2 in image) to select the desired rotation angle.</p>
+<p>3.) Select the rotation buttons labeled 3 and 4 to preform a counter-clockwise or clockwise rotation respectively.</p>
+<p>4.) Once the image is properly oriented select <strong>Confirm</strong>.</p>
+</section>
 <section id="cropping-the-image">
 <h2>Cropping the Image<a class="headerlink" href="#cropping-the-image" title="Permalink to this heading"></a></h2>
 <p>In order to make the computational demands of future steps less intensive, the unnecessary excess in the image can be cropped out.</p>
@@ -93,7 +106,7 @@ between the neon lines on the image and the cropping box’s red lines.</p>
 <p><span class="caption-text">Above is the unexpanded cropping box. Drag to encapsulate the neon box (ROI) of the image.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p><em>Note:</em> The red box forces itself to be kept as a square. This is why the the rest of the box changes shap upon moving one side or corner.
+<p><em>Note:</em> The red box forces itself to be kept as a square. This is why the the rest of the box changes shape upon moving one side or corner.
 Due to the criteria of being kept a square, it is also possible that in order to encapsulate the entire ROI the red cropping box goes off the screen.
 As long as the entire neon outlined ROI is contained within the area of the red cropping box, this is fine.</p>
 <figure class="align-default" id="id2">
@@ -103,21 +116,6 @@ As long as the entire neon outlined ROI is contained within the area of the red 
 </figcaption>
 </figure>
 <p>3.) Click <strong>Confirm</strong> under the <strong>Cropping</strong> tab on the right side of the screen.</p>
-</section>
-<section id="rotating-the-image">
-<h2>Rotating the Image<a class="headerlink" href="#rotating-the-image" title="Permalink to this heading"></a></h2>
-<p>The use of different microscopes to capture these images results in various orientation changes of the images. This rotation section of the program allows images to be reconfigured to the orientation used when the chip was placed.</p>
-<ol class="arabic">
-<li><p>Navigate to the <strong>Rotation</strong> tab on the right side of the screen and utilize the four buttons described below to re-orient the image. Each button can be clicked as many times as desired.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><img alt="rotate_left" src="_images/rotateleft.png" /> Rotates the image 90 degrees counter clockwise.</p></li>
-<li><p><img alt="rotate_right" src="_images/rotateright.png" /> Rotates the image 90 degrees clockwise.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Once the image is properly oriented select <strong>Confirm</strong>.</p></li>
-</ol>
 </section>
 </section>
 

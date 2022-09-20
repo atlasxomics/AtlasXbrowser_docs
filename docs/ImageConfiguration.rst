@@ -5,14 +5,17 @@ Now that the images are loaded into the browser, we can begin processing them.
 
 Rotating the Image
 ##################
-The use of different microscopes to capture these images results in various orientation changes of the images. This rotation section of the program allows images to be reconfigured to the orientation used when the chip was placed.
+The use of different microscopes or different chip orientations results in various orientational changes required of the images. This rotation section of the program allows images to be rotated into their desired orientation.
 
-#. Navigate to the **Rotation** tab on the right side of the screen and utilize the two rotation buttons described below to re-orient the image. Each button can be clicked as many times as desired.
+1.) Navigate to the **Rotation** tab on the right side of the screen and find the rotation options available. AtlasXbrowser supports both 45 and 90 degree rotations.
 
-    * |rotate_left| Rotates the image 90 degrees counter clockwise.
-    * |rotate_right| Rotates the image 90 degrees clockwise.
+ .. figure:: /images/LabeledRotation.png
 
-#. Once the image is properly oriented select **Confirm**.
+2.) Use the radio buttons (labeled 1 and 2 in image) to select the desired rotation angle. 
+
+3.) Select the rotation buttons labeled 3 and 4 to preform a counter-clockwise or clockwise rotation respectively.
+
+4.) Once the image is properly oriented select **Confirm**.
 
 Cropping the Image
 ###################
@@ -28,7 +31,7 @@ between the neon lines on the image and the cropping box's red lines.
 
     Above is the unexpanded cropping box. Drag to encapsulate the neon box (ROI) of the image.
 
-*Note:* The red box forces itself to be kept as a square. This is why the the rest of the box changes shap upon moving one side or corner.
+*Note:* The red box forces itself to be kept as a square. This is why the the rest of the box changes shape upon moving one side or corner.
 Due to the criteria of being kept a square, it is also possible that in order to encapsulate the entire ROI the red cropping box goes off the screen. 
 As long as the entire neon outlined ROI is contained within the area of the red cropping box, this is fine.
 

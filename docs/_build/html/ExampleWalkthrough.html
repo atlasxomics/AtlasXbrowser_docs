@@ -88,7 +88,7 @@
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Select <strong>File</strong> in the first row labled “Select BSA Image”, and navigate to the directory of your image folder and select the BSA image.</p></li>
-<li><p>Select <strong>File</strong> in the second row labled “Select postB Image” from the same image folder, select the postB image.</p></li>
+<li><p>Select <strong>File</strong> in the second row labled “Select PostB Image” from the same image folder, select the PostB image.</p></li>
 <li><p>Enter the unique ID you want associated with this particular run.</p></li>
 </ol>
 <p>Once entered select <strong>Submit</strong> at the bottom of the pop-up window.
@@ -96,8 +96,19 @@ Now the BSA image should be displayed in the browser, as shown below.</p>
 <img alt="_images/D223LoadedIn.png" src="_images/D223LoadedIn.png" />
 </div></blockquote>
 </li>
-<li><p>Activate cropping by selecting <strong>Acivate</strong> within the <strong>Cropping</strong> section in the top right of the screen.</p></li>
-<li><p>Drag the corners of the square to include the entire <em>Region of Interest</em>, defined by the green stained BSA lines.</p>
+<li><p>Once the BSA image is loaded on screen the image can be rotated as desired. This particular image does not require rotation however there is no harm in using the rotation buttons as the image can always be re-oriented to its origin.</p>
+<blockquote>
+<div><p>If it is necissary to rotate the image the following buttons can be selected as many times as desired. Rotate using the following buttons:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><img alt="rotate_left" src="_images/rotateleft.png" /> Rotates the image 90 degrees counter-clockwise.</p></li>
+<li><p><img alt="rotate_right" src="_images/rotateright.png" /> Rotates the image 90 degrees clockwise.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p>Following rotation, the image must be cropped. Activate cropping by selecting <strong>Acivate</strong> within the <strong>Cropping</strong> section in the top right of the screen.</p></li>
+<li><p>Drag the corners of the square to include the entire <em>Region of Interest</em>, defined by the fluorescently stained BSA lines.</p>
 <blockquote>
 <div><figure class="align-default" id="id1">
 <img alt="_images/ExpandedCropBox.png" src="_images/ExpandedCropBox.png" />
@@ -108,33 +119,13 @@ Now the BSA image should be displayed in the browser, as shown below.</p>
 </div></blockquote>
 </li>
 <li><p>Once the cropping square has been stretched to include the ROI, including some extra buffer room, select <strong>Confirm</strong> within the <strong>Cropping</strong> tab.</p></li>
-<li><p>Now we have the opportunity to rotate the image as necessary. For this image, no rotations are required. However there is no harm in using the rotation buttons as they can always work to re-orient the image back to its original state.</p>
-<blockquote>
-<div><p>If it is necissary to rotate the image the following buttons can be selected as many times as desired. Rotate using the following buttons:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><img alt="rotate_left" src="_images/rotateleft.png" /> Rotates the image 90 degrees counter clockwise.</p></li>
-<li><p><img alt="rotate_right" src="_images/rotateright.png" /> Rotates the image 90 degrees clockwise.</p></li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</li>
-<li><p>Once the image is rotated as desired, proceed to the pixel thresholding step by selecting <strong>Activate</strong> under the <strong>Adaptive Thresholding</strong> tab.</p>
-<blockquote>
-<div><figure class="align-default" id="id2">
-<img alt="_images/OriginalThresholdedImage.png" src="_images/OriginalThresholdedImage.png" />
-<figcaption>
-<p><span class="caption-text">Upon activating the adapative thesholding portion, a black and white version of the image,as seen above, should be loaded onto the screen.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</div></blockquote>
-</li>
+<li><p>Once the image is rotated and cropped as desired, proceed to the pixel thresholding step by selecting <strong>Activate</strong> under the <strong>Adaptive Thresholding</strong> tab.</p></li>
 <li><p>Use the sliders labeled <strong>blocksize</strong> and <strong>C</strong> to create the maximal gradient between the light and dark sections of the image.
 Experiment with different values of the sliders to see how high and low values of each affect the image.</p>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id2">
 <img alt="_images/AdjustedThreshold.png" src="_images/AdjustedThreshold.png" />
 <figcaption>
-<p><span class="caption-text">This an an example of <strong>blocksize</strong> and <strong>C</strong> settings which produce good contrast within the image.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">This an an example of <strong>blocksize</strong> and <strong>C</strong> settings which produce good contrast within the image.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </li>
@@ -142,17 +133,17 @@ Experiment with different values of the sliders to see how high and low values o
 <li><p>Begin the process of ROI location by selecting <strong>Activate</strong>, under the <strong>Locating ROI</strong> tab.</p></li>
 <li><p>Unlike when cropping the image previously, here we must be precise about the determination of the ROI. Drag the red rectangle to the borders of the ROI, created by the BSA staining on the image.</p>
 <blockquote>
-<div><figure class="align-default" id="id4">
-<img alt="_images/ProperlyPlacedROILines.png" src="_images/ProperlyPlacedROILines.png" />
+<div><figure class="align-default" id="id3">
+<img alt="_images/ROILocated.png" src="_images/ROILocated.png" />
 <figcaption>
-<p><span class="caption-text">In order to indify the ROI the user must drag the corners of this red square to the outside of the fluorescent lines.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text">In order to indify the ROI the user must drag the corners of this red square to the outside of the fluorescent lines.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p><em>Note:</em> The dye is being run through channels of the chips, and as such must be included within this rectangle. The optimal placement of this rectangle is directly on the outside borders of the channels containing the BSA staining.</p>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id4">
 <img alt="_images/ProperlyPlacedROI.png" src="_images/ProperlyPlacedROI.png" />
 <figcaption>
-<p><span class="caption-text">This is a properly placed box, notice how it inclues the channels containing the BSA staining.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-text">This is a properly placed box, notice how it inclues the channels containing the BSA staining.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
