@@ -46,6 +46,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#image-specifications-and-fluorescent-staining">Image Specifications and Fluorescent Staining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#image-folder-specifications">Image Folder Specifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-image-and-entering-metadata">Loading Image and Entering Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#barcode-file-selection">Barcode File Selection</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ImageConfiguration.html">Image Configuration</a></li>
@@ -141,15 +142,42 @@ new folder pertaining this particular run which will store these two images, and
 <p><strong>1.)</strong> Select <strong>File</strong> in the first row of the pop-up titled, “Select BSA Image”. Then navigate to the directory
 of the image folder, and select the BSA image.</p>
 <p><strong>2.)</strong> Select <strong>File</strong> in the second row, labeled “Select PostB Image”. Navigate to the image folder, and select the PostB image.</p>
-<p><strong>3.)</strong> This button is used to select a custom barcode file. Automatically the default bc50v1 barcode file is selected. To Change this, select the currently labeled <strong>bc50v1</strong> and navigate to the desired custom barcode file.</p>
+<p><strong>3.)</strong> This button is used to select a custom barcode file. Automatically the default bc50v1-24 barcode file is selected. To Change this, select the currently labeled <strong>bc50v1-24</strong> and navigate to the desired custom barcode file.</p>
 <blockquote>
 <div><img alt="_images/image_processing_revert.png" src="_images/image_processing_revert.png" />
-<p>Upon selecting a custom barcode file, if the user wants to revert to the default bc50v1 file, they can select the <strong>Revert to bc50v1</strong> circled above.</p>
+<p>Upon selecting a custom barcode file, if the user wants to revert to the default bc50v1-24 file, they can select the <strong>Revert to bc50v1-24</strong> circled above.</p>
 </div></blockquote>
-<p><strong>4.)</strong> Enter the desired name of the run (or data set) in the textbox.</p>
+<p><strong>4.)</strong> Enter the desired name of the run (or data set) in the text box.</p>
 <p><strong>5.)</strong> Once the images have been loaded in without error, and the run ID entered, select <strong>Submit</strong> to continue with the image processing.</p>
 <p>Upon selecting <strong>Submit</strong>, the popup should disappear and the BSA image should be loaded into the main window of the Browser.</p>
 <p>This metadata will be saved and stored in the associated Spatial Folder for this experiment. Now we can proceed to configuring the image.</p>
+</section>
+<section id="barcode-file-selection">
+<h2>Barcode File Selection<a class="headerlink" href="#barcode-file-selection" title="Permalink to this heading"></a></h2>
+<p>As noted above, during the image loading process, the user is given the option to specify a custom barcode file to be used in AtlasXbrowser. The barcode file specified at this step is used when
+generating the <em>tissue_position_list.csv</em> file, as part of the spatial folder. To learn more about the contents of the spatial folder, please see the <strong>Utilizing Spatial Folder</strong> section of the documentation.</p>
+<p>To view the barcode files that are included in the github repo, navigate to the “barcode_files”.</p>
+<figure class="align-default">
+<img alt="_images/barcode_file_options.png" src="_images/barcode_file_options.png" />
+</figure>
+<p>Shown above are the contents of the barcodes folder within the github repo of AtlasXbrowser.</p>
+<ul class="simple">
+<li><p><strong>yale_barcodes50</strong> v1-v4: These are the barcodes used in the initial DBiT Paper published by The Fan Lab. The v1 - v4 indicate the orientation of these sequences.</p>
+<ul>
+<li><p>v1: Standard Orientation</p></li>
+<li><p>v2: Flipping the B chip barcodes relative to v1</p></li>
+<li><p>v3: Flipping of the A chip barcodes relative to v1</p></li>
+<li><p>v4: Flipping of both the A and B chip barcodes relative to v1</p></li>
+</ul>
+</li>
+<li><p><strong>bc50v[1-2]-24</strong>: These are the barcodes currently being used and recommended by AtlasXomics for ATAC seq. Two of the B chip barcodes have been replaced from the original Yale barcode batch.</p>
+<ul>
+<li><p>The bv50v1-24.txt file is the default barcode file within AtlasXbrowser.</p></li>
+<li><p>The v1 and v2 orientations of these barcode files match that listed above. Where v2 has flipped B chip barcodes relative to v1 and so forth.</p></li>
+</ul>
+</li>
+</ul>
+<p>Depending on the specific barcodes used in the DBiT process in the wetlab, any of these files can be selected during the image loading step.</p>
 </section>
 </section>
 
