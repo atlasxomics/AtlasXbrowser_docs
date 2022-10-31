@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Fri Sep 23 12:44:59 2022
+
+# Make data base, printed on Sun Oct 30 17:31:40 2022
 
 # Variables
 
@@ -44,11 +47,13 @@ PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/Users/jonah/.nvm/versions/node/v18.
 # environment
 NVM_BIN = /Users/jonah/.nvm/versions/node/v18.2.0/bin
 # environment
+LaunchInstanceID = C1C15339-3561-4D85-B4F5-DEDFA0B79527
+# environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.UsllioLyG1/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.iznbo3lobz/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -68,7 +73,7 @@ HOME = /Users/jonah
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/jonah/Library/Application Support/Code/CachedData/74b1f979648cc44d385a2286793c226e611f59e7
+VSCODE_CODE_CACHE_PATH = /Users/jonah/Library/Application Support/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
 # environment
 LOGNAME = jonah
 # environment
@@ -110,7 +115,7 @@ TMPDIR = /var/folders/qz/r2wj364n18j6cln2k1dp44b00000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/jonah/Library/Application Support/Code/1.71.2-main.sock
+VSCODE_IPC_HOOK = /Users/jonah/Library/Application Support/Code/1.72.2-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -122,7 +127,7 @@ MFLAGS = -Rrqp
 # environment
 NVM_DIR = /Users/jonah/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.13086262.13086268
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.15565155.15565161
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -143,6 +148,8 @@ MAKEFILES :=
 LC_ALL = C
 # environment
 CONDA_PYTHON_EXE = /Users/jonah/opt/anaconda3/bin/python
+# environment
+SECURITYSESSIONID = 186a5
 # automatic
 ^F = $(notdir $^)
 # default
@@ -156,13 +163,13 @@ MAKELEVEL := 0
 # environment
 CONDA_PREFIX = /Users/jonah/opt/anaconda3
 # environment
-VSCODE_PID = 23972
+VSCODE_PID = 487
 # environment
 _CE_CONDA = 
 # environment
 LANG = C
 # variable set hash-table stats:
-# Load=75/1024=7%, Rehash=0, Collisions=2/96=2%
+# Load=77/1024=8%, Rehash=0, Collisions=2/98=2%
 
 # Pattern-specific Variable Values
 
@@ -244,8 +251,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri Sep 23 12:44:59 2022
+# Finished Make data base on Sun Oct 30 17:31:40 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-

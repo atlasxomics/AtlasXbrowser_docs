@@ -33,9 +33,9 @@ Once the image has been processed using AtlasXbrowser, the relevant information 
 
         * The column the tixel is found in, indexed starting from 0.
 
-        * The X-Coordinate of the tixel.
-
         * The Y-Coordinate of the tixel.
+
+        * The X-Coordinate of the tixel.
 
 Loading Spatial Folder
 ######################
