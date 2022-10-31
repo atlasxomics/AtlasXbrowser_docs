@@ -1,10 +1,23 @@
 Installation
 ------------
 
-To use AtlasXbrowser, please download the most recent release: https://github.com/atlasxomics/AtlasXbrowser/releases. Executable file (AtlasXbrowser.tgz) is available for Mac OSX. Follow steps below if you prefer to run AtlasXbrowser as a python application from source code.
+Methods of Installation
+#######################
 
-Downloading
-###########
+AtlasXbrowser is both available to be downloaded and run as an executable file, with compatible files for MacOS and Windows.
+The application is also able to be run from source code, using the open source repo.
+
+Running Executable
+##################
+
+* To download the appropriate executable file, navigate to the releases page of the Github repo https://github.com/atlasxomics/AtlasXbrowser/releases.
+* From there find the desired release version. We recommend using the latest release version.
+* There exists AtlasXbrowser.tgz to be run on MacOS and AtlasXbrowser.exe to be run on Windows. Download the appropriate file.
+* Once downloaded click on the file, or execute it from the command line and the application should launch.
+
+
+Running from Source
+###################
 
 * Open a terminal window and navigate to the directory where you want to download AtlasXbrowser to.
 
