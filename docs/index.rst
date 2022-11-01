@@ -12,8 +12,7 @@ Learn more about `AtlasXomics`_.
 .. _AtlasXomics: https://www.atlasxomics.com
 
 .. toctree::
-   :maxdepth: 8
-   :caption: Sections:
+   :caption: AtlasXbrowser:
 
    Overview
    Installation
@@ -24,7 +23,20 @@ Learn more about `AtlasXomics`_.
    SpatialFolder
    ExampleWalkthrough
 
+.. toctree::
+   :caption: AtlasXplore:
 
+   Gene Search <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/GeneSearch.html>
+   Genome Browser <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/GenomeBrowser.html>
+   Motif Search <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/MotifSearch.html>
+   Lasso Selector <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/LassoSelector.html>
+   Customization <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/Customization.html>
+   Plot Saving <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/SavingPlots.html>
+
+.. toctree::
+   :caption: Epigenome Data Analysis
+
+   Data Pipeline <https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/#dependencies>
 
 .. image:: /images/atlasbg.png
 
