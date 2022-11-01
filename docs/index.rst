@@ -36,7 +36,7 @@ Learn more about `AtlasXomics`_.
 .. toctree::
    :caption: Epigenome Data Analysis
 
-   Data Pipeline <https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/#dependencies>
+   Introduction <https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/Introduction.html>
 
 .. image:: /images/atlasbg.png
 
