@@ -39,5 +39,5 @@ Learn more about `AtlasXomics`_.
    Spatial Epigenome<https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/SpatialEpigenome.html>
    Spatial Transcriptome<https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/SpatialTranscriptome.html>
 
-.. image:: /images/atlasbg.png
+.. image:: /docs/images/atlasbg.png
 
