@@ -34,9 +34,10 @@ Learn more about `AtlasXomics`_.
    Plot Saving <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/SavingPlots.html>
 
 .. toctree::
-   :caption: Epigenome Data Analysis
+   :caption: AtlasXomics:
 
-   Introduction <https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/Introduction.html>
+   Spatial Epigenome<https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/SpatialEpigenome.html>
+   Spatial Transcriptome<https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/SpatialTranscriptome.html>
 
-.. image:: /images/atlasbg.png
+.. image:: ./images/atlasbg.png
 
