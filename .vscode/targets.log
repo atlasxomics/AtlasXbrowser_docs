@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Sun Oct 30 17:31:40 2022
+# Make data base, printed on Tue Nov  8 16:54:19 2022
 
 # Variables
 
@@ -47,13 +44,13 @@ PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/Users/jonah/.nvm/versions/node/v18.
 # environment
 NVM_BIN = /Users/jonah/.nvm/versions/node/v18.2.0/bin
 # environment
-LaunchInstanceID = C1C15339-3561-4D85-B4F5-DEDFA0B79527
+LaunchInstanceID = 60458354-BDEB-4A78-BA5F-E2B6F9E443DF
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.iznbo3lobz/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.eJLBmfe24Y/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -73,7 +70,7 @@ HOME = /Users/jonah
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/jonah/Library/Application Support/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
+VSCODE_CODE_CACHE_PATH = /Users/jonah/Library/Application Support/Code/CachedData/8fa188b2b301d36553cbc9ce1b0a146ccb93351f
 # environment
 LOGNAME = jonah
 # environment
@@ -115,7 +112,7 @@ TMPDIR = /var/folders/qz/r2wj364n18j6cln2k1dp44b00000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/jonah/Library/Application Support/Code/1.72.2-main.sock
+VSCODE_IPC_HOOK = /Users/jonah/Library/Application Support/Code/1.73.0-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -127,7 +124,7 @@ MFLAGS = -Rrqp
 # environment
 NVM_DIR = /Users/jonah/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.15565155.15565161
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.17332948.17332954
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -163,7 +160,7 @@ MAKELEVEL := 0
 # environment
 CONDA_PREFIX = /Users/jonah/opt/anaconda3
 # environment
-VSCODE_PID = 487
+VSCODE_PID = 444
 # environment
 _CE_CONDA = 
 # environment
@@ -177,7 +174,7 @@ LANG = C
 
 # Directories
 
-# . (device 16777233, inode 5029376): 9 files, no impossibilities.
+# . (device 16777234, inode 5029376): 9 files, no impossibilities.
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -251,6 +248,8 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sun Oct 30 17:31:40 2022
+# Finished Make data base on Tue Nov  8 16:54:19 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
