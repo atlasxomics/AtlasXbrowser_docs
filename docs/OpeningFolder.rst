@@ -10,6 +10,9 @@ clear where the ROI is. As shown in the image below, the ROI is enclosed by this
 
 *Note:* We recommend using two different colors of fluorescent dye on each chip to ensure the image is in correct orientation.
 
+**NOTE** If using a purchased AtlasXomics kit, proper orientation would be to have the green channels on the left and top of the image. The example used throughout this documentation is 
+not in said orientation. If this was from an AtlasXomics kit, the image should be horizontally reflected from how it is currently displayed.
+
 
 The only image used for AltasXbrowser processing is the BSA image, with the fluorescent outside channels of the ROI in view.
 
