@@ -4,15 +4,15 @@ Installation
 Methods of Installation
 #######################
 
-AtlasXbrowser is both available to be downloaded and run as an executable file, with compatible files for MacOS and Windows.
+AtlasXbrowser is both available to be downloaded and run as an executable file, with compatible files for macOS and Windows.
 The application is also able to be run from source code, using the open source repo.
 
 Running Executable
 ##################
 
-* To download the appropriate executable file, navigate to the releases page of the Github repo https://github.com/atlasxomics/AtlasXbrowser/releases.
+* To download the appropriate executable file, navigate to the releases page of the GitHub repo https://github.com/atlasxomics/AtlasXbrowser/releases.
 * From there find the desired release version. We recommend using the latest release version.
-* There exists AtlasXbrowser.tgz to be run on MacOS and AtlasXbrowser.exe to be run on Windows. Download the appropriate file.
+* There exists AtlasXbrowser.tgz to be run on macOS and AtlasXbrowser.exe to be run on Windows. Download the appropriate file.
 * Once downloaded click on the file, or execute it from the command line and the application should launch.
 
 
@@ -71,7 +71,7 @@ Managing Dependencies
 
       python --version
 
-   This should return Python 3.7.xx. If this is not the case, deactivate the conda environment using "conda deactivate'. Repeat this command until there is no conda environment listed at the left side of the terminal and then reactivate the environment.
+   This should return Python 3.7.xx. If this is not the case, deactivate the conda environment using "conda deactivate'. Repeat this command until there is no conda environment listed on the left side of the terminal and then reactivate the environment.
 
 * To install all the necessary packages for AtlasXBrowser run the following commands in the activated conda environment.
 
