@@ -5,6 +5,7 @@ AtlasXbrowser was built to help facilitate the image processing aspect of the DB
 guides the user through the steps necessary to generate a "Spatial Folder". This folder contains the output of the image processing in 10x Visium image data format,
 allowing for easy incorporation into bioinformatics packages used in spatial seq analysis. 
 
+**AtlasXbrowser Workflow**
 .. figure:: /images/UpdatedFigure.png
 
 As seen in the figure above, following the removal of the B chip and the flowing of fluorescently stained BSA, the images are taken. From here they 
