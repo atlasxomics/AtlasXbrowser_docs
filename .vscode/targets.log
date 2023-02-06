@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Tue Nov  8 16:54:19 2022
+# Make data base, printed on Mon Feb  6 09:03:08 2023
 
 # Variables
 
@@ -15,6 +15,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 NVM_INC = /Users/jonah/.nvm/versions/node/v18.2.0/include/node
 # automatic
@@ -38,23 +40,27 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_CWD = /
+VSCODE_CWD = /Users/jonah/Documents/GitHub/DAPI-Nuclei-Analysis/Yanking_7aad_image
 # environment
-PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/Users/jonah/.nvm/versions/node/v18.2.0/bin:/Users/jonah/opt/anaconda3/bin:/Users/jonah/opt/anaconda3/condabin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+GSETTINGS_SCHEMA_DIR = /Users/jonah/opt/anaconda3/envs/image-analysis/share/glib-2.0/schemas
+# environment
+PATH = /Users/jonah/opt/anaconda3/envs/image-analysis/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/jonah/.nvm/versions/node/v18.2.0/bin:/Users/jonah/miniforge3/condabin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 # environment
 NVM_BIN = /Users/jonah/.nvm/versions/node/v18.2.0/bin
 # environment
-LaunchInstanceID = 60458354-BDEB-4A78-BA5F-E2B6F9E443DF
+LaunchInstanceID = F231BE6F-D0DE-4F43-ADF1-8C324BA60B9A
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.eJLBmfe24Y/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.AqsAyQuX7E/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-CONDA_EXE = /Users/jonah/opt/anaconda3/bin/conda
+DISPLAY = /private/tmp/com.apple.launchd.6Lv7vGNBmo/org.xquartz:0
+# environment
+CONDA_EXE = /Users/jonah/miniforge3/bin/conda
 # environment
 PWD = /Users/jonah/Documents/GitHub/AtlasXbrowser_docs
 # environment
@@ -70,13 +76,15 @@ HOME = /Users/jonah
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/jonah/Library/Application Support/Code/CachedData/8fa188b2b301d36553cbc9ce1b0a146ccb93351f
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/jonah/Library/Application Support/Code/CachedData/97dec172d3256f8ca4bfb2143f3f76b503ca0534
 # environment
 LOGNAME = jonah
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
-CONDA_PROMPT_MODIFIER = (base) 
+CONDA_PROMPT_MODIFIER = (image-analysis) 
 # environment
 NVM_CD_FLAGS = 
 # environment
@@ -84,7 +92,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-CONDA_DEFAULT_ENV = base
+CONDA_DEFAULT_ENV = image-analysis
 # environment
 XPC_FLAGS = 0x0
 # default
@@ -92,19 +100,23 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 2
+SHLVL = 3
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = jonah
 # makefile
 .DEFAULT_GOAL := 
+# environment
+TERM_SESSION_ID = BB47C83B-030A-43F2-8132-A7024F68D1AD
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 CONDA_SHLVL = 1
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# environment
+TERM_PROGRAM = Apple_Terminal
 # default
 .VARIABLES := 
 # environment
@@ -112,7 +124,7 @@ TMPDIR = /var/folders/qz/r2wj364n18j6cln2k1dp44b00000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/jonah/Library/Application Support/Code/1.73.0-main.sock
+VSCODE_IPC_HOOK = /Users/jonah/Library/Application Support/Code/1.74.3-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -122,15 +134,19 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
+TERM_PROGRAM_VERSION = 443
+# environment
 NVM_DIR = /Users/jonah/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.17332948.17332954
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.23735052.23735058.112ACBFB-2322-43C7-A253-236B5917CF04
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
+# environment
+GSETTINGS_SCHEMA_DIR_CONDA_BACKUP = 
 # environment
 HOMEBREW_REPOSITORY = /opt/homebrew
 # environment
@@ -144,7 +160,7 @@ MAKEFILES :=
 # environment
 LC_ALL = C
 # environment
-CONDA_PYTHON_EXE = /Users/jonah/opt/anaconda3/bin/python
+CONDA_PYTHON_EXE = /Users/jonah/miniforge3/bin/python
 # environment
 SECURITYSESSIONID = 186a5
 # automatic
@@ -158,15 +174,17 @@ _CE_M =
 # environment
 MAKELEVEL := 0
 # environment
-CONDA_PREFIX = /Users/jonah/opt/anaconda3
+CONDA_PREFIX = /Users/jonah/opt/anaconda3/envs/image-analysis
 # environment
-VSCODE_PID = 444
+TERM = xterm-256color
+# environment
+VSCODE_PID = 41383
 # environment
 _CE_CONDA = 
 # environment
 LANG = C
 # variable set hash-table stats:
-# Load=77/1024=8%, Rehash=0, Collisions=2/98=2%
+# Load=86/1024=8%, Rehash=0, Collisions=2/107=2%
 
 # Pattern-specific Variable Values
 
@@ -174,7 +192,7 @@ LANG = C
 
 # Directories
 
-# . (device 16777234, inode 5029376): 9 files, no impossibilities.
+# . (device 16777231, inode 5029376): 9 files, no impossibilities.
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -248,7 +266,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Tue Nov  8 16:54:19 2022
+# Finished Make data base on Mon Feb  6 09:03:08 2023
 
  
 make: *** No rule to make target `all'.  Stop.

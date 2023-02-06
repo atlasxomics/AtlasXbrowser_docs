@@ -10,8 +10,8 @@ from an A chip and B chip channel, serve as X and Y coordinates used to map sequ
 Locating ROI
 ############
 
-During this step we want to define the region of interest for the browser. This step is made much easier if the 
-outside channels of the chip have BSA fluid with stained dye within them. As then the ROI corresponds to the square created
+During this step, we want to define the region of interest for the browser. This step is made much easier if the 
+outside channels of the chip have BSA fluid with stained dye within them. As the ROI then corresponds to the square created
 by the overlap of these neon channels.
 
 #. Navigate to the **Locating ROI** tab on the right hand side of the screen, and select **Activate**.
@@ -29,12 +29,12 @@ by the overlap of these neon channels.
 
        The above image shows the proper designation of the ROI, again note how the rectangle includes the channels containing fluorescence.
 
-#. Once the four corners have properly placed, select **Confirm** within the same **Locating ROI** tab.
+#. Once the four corners have been properly placed, select **Confirm** within the same **Locating ROI** tab.
 
 Overlaying Tixels 
 #################
 
-To check the work done in the last step, we must ensure that the alignment of the tixels on the image are as expected.
+To check the work done in the last step, we must ensure that the alignment of the tixels on the image is as expected.
 The visualization of the tixels corresponds to how the ROI was discerned in the previous step.
 
 There are three options for the image to be set as the background. As defined by the buttons in the **Overlay** section on the right hand side of the screen.
@@ -45,32 +45,32 @@ There are three options for the image to be set as the background. As defined by
 
 * The **Locating ROI** tab allows the placement of the tixels to be visualized on top of the images. Select any of the buttons from the figure above to observe how the tixels are overlaid on top of the tissue.
 
-    *Note:* One way to ensure the proper placement of the ROI is to select the **BSA** image, and ensure that the outer rows and columns of the grid align with the fluorescence as shown below.
+    *Note:* One way to ensure the proper placement of the ROI is to select the **BSA** image and ensure that the outer rows and columns of the grid align with the fluorescence as shown below.
     
     .. figure:: /images/ProperlyPlacedROI.png
 
        In this image the outer layers of tixels both horizontally and vertically align with the BSA staining, validating the placement of the ROI.
        
 
-* If the placement of the ROI must be re-done for any reason, just re-select the **Activate** button in the **Locating ROI** tab and the red rectangle can be re-adjusted.
+* If the placement of the ROI must be redone for any reason, just re-select the **Activate** button in the **Locating ROI** tab and the red rectangle can be re-adjusted.
 
 Activating Tixels
 ##################
 
 Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically predicts which tixels are over tissue and which are not.
-In this step you can examine the image and modify any of the classifications AtlasXbrowser made.
+In this step, you can examine the image and modify any of the classifications AtlasXbrowser made.
 
 #. Select **Activate** under the **On/Off Tissue** tab on the right side of the screen. 
 
-#. Tixels filled in red indicate that they are covering tissue, and clear tixels indicate they are not. Use any or multiple of the selection options to changes these designations.
+#. Tixels filled in red indicate that they are covering tissue, and clear tixels indicate they are not. Use any or multiple of the selection options to change these designations.
 
-    * **Point (flip)** Use your mouse to click on any individual tixel. The state of this tixel will flip from what identify formerly was, meaning on tissue sites to to off tissue and vice versa.
+    * **Point (flip)** Use your mouse to click on any individual tixel. The state of this tixel will flip from what identify formerly was, meaning on-tissue sites to off-tissue and vice versa.
 
     * **Rectangle (flip)** Click and drag on screen to make an encompassing red rectangle. All the tixels included within this rectangle  will have their state flipped from what it formerly was. 
 
-    * **Rectangle (all on)** Click and drag on screen to create a rectangle which encompasses all desired tixels. Tixels in this region will all be designated as covering tissue.
+    * **Rectangle (all on)** Click and drag on screen to create a rectangle that encompasses all desired tixels. Tixels in this region will all be designated as covering tissue.
 
-    * **Rectangle (all off)** Click and drag on screen to create a rectangle which encompasses all desired tixels. Every tixel within this region will be designated as being off tissue.
+    * **Rectangle (all off)** Click and drag on screen to create a rectangle that encompasses all desired tixels. Every tixel within this region will be designated as being off tissue.
 
     .. figure:: /images/ClassifyingTixels.png
 

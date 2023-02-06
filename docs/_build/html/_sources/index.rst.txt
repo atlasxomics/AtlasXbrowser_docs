@@ -26,18 +26,24 @@ Learn more about `AtlasXomics`_.
 .. toctree::
    :caption: AtlasXplore:
 
-   Gene Search <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/GeneSearch.html>
+   Overview <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/Overview.html>
+   Introduction <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/Introduction.html>
    Genome Browser <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/GenomeBrowser.html>
    Motif Search <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/MotifSearch.html>
    Lasso Selector <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/LassoSelector.html>
-   Customization <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/Customization.html>
+   Cell Type Labeling <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/CellTypeLabeling.html>
    Plot Saving <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/SavingPlots.html>
+   FAQ <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/FAQ.html>
 
 .. toctree::
    :caption: AtlasXomics:
 
+   Installation <https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/Installation.html>
    Spatial Epigenome<https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/SpatialEpigenome.html>
-   Spatial Transcriptome<https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/SpatialTranscriptome.html>
 
 .. image:: ./images/atlasbg.png
 
+..
+   Spatial Transcriptome<https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/SpatialTranscriptome.html>
+   Glossary <https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/Glossary.html>
+   FAQ Spatial Epigenome <https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/FAQ_Spatial_Epigenome.html>

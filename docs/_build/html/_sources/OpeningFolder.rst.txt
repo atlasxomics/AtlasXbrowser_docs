@@ -4,7 +4,7 @@ _____________________
 Image Specifications and Fluorescent Staining
 ##############################################
 
-An important step in the image processing done by AtlasXbrowser, is the location of the ROI (Region of Interest) of the image, corresponding to the section of tissue which the A and B chips overlap. This is made much easier by flowing Bovine Serum Albumin (BSA) solution mixed with 
+A crucial step of the image processing done by AtlasXbrowser, is the location of the Region of Interest (ROI) of the image corresponding to the section of tissue where the A and B chips overlap. This is made much easier by flowing Bovine Serum Albumin (BSA) solution mixed with 
 fluorescent dye through the outmost channels of both the A and B chips. These fluorescent colors will make it visually very
 clear where the ROI is. As shown in the image below, the ROI is enclosed by this colored square.
 
