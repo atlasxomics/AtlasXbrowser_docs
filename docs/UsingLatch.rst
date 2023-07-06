@@ -16,13 +16,9 @@ During this step, one must click the play/stop button on the specified app to tu
 
 .. figure:: /images/clickTerminal.png
 
-3. Then type the command **abrowser** into the terminal and hit enter.
-
-*Note:* Only have to run this comand when the app is initially turned on.
+3. Then type the command **abrowser** into the terminal and hit enter. Only have to run this comand when the app is initially turned on. The application will begin to load and the mesage **...done** will appear in the terminal
 
 .. figure:: /images/abrowsercommand.png
-
-    *Note:* The application will begin to load and the mesage **...done** will appear in the terminal.
 
 The Images folder is where the DBiT run images will be stored, and where the spatial folder will be placed after it is generated. This is the formatting for the folder. There is the ability to drag and drop files to this folder in the app.
 
