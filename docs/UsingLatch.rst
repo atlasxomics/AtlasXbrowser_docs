@@ -1,5 +1,5 @@
 
-Running AtlasXbrowser on Latch
+Running on Latch
 __________________________________
 
 Latch is a biomedical data analysis company that provides a cloud-based platform for researchers and organizations to store, analyze, and interpret large-scale genomic and other biomedical datasets. The company's platform enables users to access and analyze complex data sets, collaborate with other researchers, and leverage various bioinformatics tools and workflows. AtlasXBrowser will be running on a Latch **Pod/App**, which is a standalone Amazon ec2 instance.
