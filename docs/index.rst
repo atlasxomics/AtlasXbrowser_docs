@@ -22,6 +22,7 @@ Learn more about `AtlasXomics`_.
    ROICharacterization
    SpatialFolder
    ExampleWalkthrough
+   UsingLatch
 
 .. toctree::
    :caption: AtlasXplore:
