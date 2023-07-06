@@ -32,7 +32,7 @@ The Images folder is where the DBiT run images will be stored, and where the spa
 
 * Only the postB_BSA image is necessary for software to work.
 
-.. figure:: images/leftsideLatch_folderStructure.png
+.. figure:: images/leftsidelatch_folderStructure.png
 
     There is one more location where images can be stored, inside the data directory in Latch. One can upload files and folders.
 
