@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'AtlasXbrowser Documentation'
+project = 'AtlasXBrowser Documentation'
 copyright = '2022, AtlasXomics'
 author = 'AtlasXomics'
 
