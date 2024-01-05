@@ -36,12 +36,6 @@ Learn more about `AtlasXomics`_.
    Plot Saving <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/SavingPlots.html>
    FAQ <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/FAQ.html>
 
-.. toctree::
-   :caption: AtlasXomics:
-
-   Installation <https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/Installation.html>
-   Spatial Epigenome<https://docs.atlasxomics.com/projects/AtlasXpipeline/en/latest/SpatialEpigenome.html>
-
 .. image:: ./images/atlasbg.png
 
 ..
