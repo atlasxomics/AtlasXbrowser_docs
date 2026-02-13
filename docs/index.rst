@@ -24,18 +24,6 @@ Learn more about `AtlasXomics`_.
    ExampleWalkthrough
    UsingLatch
 
-.. toctree::
-   :caption: AtlasXplore:
-
-   Overview <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/Overview.html>
-   Introduction <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/Introduction.html>
-   Genome Browser <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/GenomeBrowser.html>
-   Motif Search <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/MotifSearch.html>
-   Lasso Selector <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/LassoSelector.html>
-   Cell Type Labeling <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/CellTypeLabeling.html>
-   Plot Saving <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/SavingPlots.html>
-   FAQ <https://docs.atlasxomics.com/projects/AtlasXplore/en/latest/FAQ.html>
-
 .. image:: ./images/atlasbg.png
 
 ..
