@@ -9,6 +9,11 @@ AtlasXBrowser is a Graphical User Interface used to facilitate the processing of
 images.
 Learn more about `AtlasXomics`_.
 
+For the current desktop app, see :ref:`tixel-geometry` for tixel sizes and custom
+capture dimensions, and :ref:`zoom-and-toolbar` for image zoom and the scrollable
+side toolbar. Existing spatial folders retain their geometry as described in
+:ref:`saved-tixel-geometry`.
+
 .. _AtlasXomics: https://www.atlasxomics.com
 
 .. toctree::

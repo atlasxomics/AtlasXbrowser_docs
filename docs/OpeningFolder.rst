@@ -59,11 +59,75 @@ of the image folder, and select the BSA image.
 
 **3.)** Enter the desired name of the run (or data set) in the text box.
 
-**4.)** Once the images have been loaded in without error, and the run ID entered, select **Submit** to continue with the image processing.
+**4.)** In the **Tixel geometry** section of the **Selecting Images** window,
+select the **Tixel size (µm)** that matches your chip. New sessions default to
+10 µm. See :ref:`tixel-geometry` for the presets and custom dimensions.
+
+**5.)** Once the image, barcode file, run ID and tixel geometry are configured,
+select **Submit** to continue with image processing.
 
 Upon selecting **Submit**, the popup should disappear and the BSA image should be loaded into the main window of the Browser.
 
 This metadata will be saved and stored in the associated Spatial Folder for this experiment. Now we can proceed to configuring the image.
+
+.. _tixel-geometry:
+
+Tixel Size and Geometry
+#######################
+
+Set the geometry in the **Selecting Images** window before selecting **Submit**.
+Choose a tixel size of **10**, **15**, **25** or **50 µm**. The presets are:
+
+.. list-table:: Default tixel dimensions
+   :header-rows: 1
+   :widths: 20 25 25 30
+
+   * - Tixel size (µm)
+     - Capture width (µm)
+     - Gap (µm)
+     - Center-to-center pitch (µm)
+   * - 10 (default)
+     - 10
+     - 15
+     - 25
+   * - 15
+     - 15
+     - 10
+     - 25
+   * - 25
+     - 25
+     - 25
+     - 50
+   * - 50
+     - 50
+     - 50
+     - 100
+
+The **capture width** is the width of a tixel's capture region. The **gap** is
+the edge-to-edge distance between adjacent capture regions. Their sum is the
+**center-to-center pitch**. For example, a 10 µm capture region with a 15 µm gap
+has a 25 µm pitch.
+
+Expand **Override tixel geometry** to enter a custom **Capture width (µm)** and
+**Gap (µm)**. The capture width must be a finite, positive number; the gap must
+be finite and zero or greater. The dialog previews the resulting pitch and
+disables **Submit** while these values are invalid. These dimensions apply
+uniformly across the chip.
+
+Selecting another tixel size or clicking **Restore defaults** replaces the
+custom dimensions with the selected preset. Collapsing the override section
+only hides its fields; it does not reset the values. Use **Restore defaults**
+to discard overrides.
+
+Geometry controls determine the capture regions and their spacing within the
+ROI. They do not change the channel count specified by the barcode file.
+The selected dimensions are saved in the spatial folder; see
+:ref:`saved-tixel-geometry` for details about reopening existing folders.
+
+.. note::
+
+   The image-loading screenshots show an earlier version of the dialog and do
+   not include the tixel geometry controls.
 
 Barcode File Selection
 ######################

@@ -31,6 +31,13 @@ by the overlap of these neon channels.
 
 #. Once the four corners have been properly placed, select **Confirm** within the same **Locating ROI** tab.
 
+The ROI corners mark the **outer edges of the capture array**, including the
+full width of the first and last capture regions. The browser uses the capture
+width and gap selected during image loading to distribute the tixels within
+these boundaries; capture width and gap need not be equal. See
+:ref:`tixel-geometry` for the available dimensions. Use :ref:`zoom-and-toolbar`
+to inspect and adjust the corners more closely.
+
 Overlaying Tixels 
 #################
 
@@ -58,7 +65,9 @@ Activating Tixels
 ##################
 
 Based on the results of the adaptive thresholding and how many pixels within a tixel have been designated white, AtlasXbrowser automatically predicts which tixels are over tissue and which are not.
-In this step, you can examine the image and modify any of the classifications AtlasXbrowser made.
+Automatic classification samples within each capture region using the selected
+geometry and excludes the gaps between tixels. In this step, you can examine
+the image and modify any of the classifications AtlasXbrowser made.
 
 #. Select **Activate** under the **On/Off Tissue** tab on the right side of the screen. 
 

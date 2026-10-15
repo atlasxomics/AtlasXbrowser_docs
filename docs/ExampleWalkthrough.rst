@@ -9,13 +9,22 @@ _______________
 #. Once a popup has appeared:
 
     #. Select **File** in the first row labeled "Select BSA Image", navigate to the directory of your image folder and select the BSA image.
-    #. Select **File** in the second row labeled "Select PostB Image" from the same image folder, and select the PostB image.
+    #. Keep the default barcode file or select the custom barcode file for this experiment.
     #. Enter the unique ID you want associated with this particular run.
+    #. Select the tixel size in **Tixel geometry**. New sessions default to 10 µm;
+       choose 15, 25 or 50 µm when appropriate. Expand **Override tixel geometry**
+       only if custom capture width or gap values are needed. Check the displayed
+       center-to-center pitch before continuing; see :ref:`tixel-geometry`.
 
     Once entered select **Submit** at the bottom of the pop-up window.
     Now the BSA image should be displayed in the browser, as shown below.
 
     .. image:: /images/D223LoadedIn.png
+
+#. After the image loads, **Zoom** appears above **Rotation** in the side toolbar.
+   Use it to inspect the image and overlays, and use the image scrollbars to
+   navigate an enlarged view. **Reset** returns to 100%. Scroll the toolbar
+   separately if a control is below the visible area; see :ref:`zoom-and-toolbar`.
 
 #. Once the BSA image is loaded on the screen the image can be rotated as desired. This particular image does not require rotation however there is no harm in using the rotation buttons as the image can always be re-oriented to its origin.
 
@@ -64,7 +73,7 @@ _______________
 
     * If the tixels are not aligned, navigate to the **Locating ROI** tab and re-select **Activate** to allow for edits to the chosen ROI region.
 
-    * Within the **Overlay** tab, there is also a button labeled **Tixels**. This allows the tixels to be displayed over the thresholded image.
+    * Within the **Overlay** section, select **BW** to display the tixels over the thresholded image.
 
 #. Once it has been confirmed that the tixels are properly aligned to the BSA channels, select **Activate** under the **On/Off Tissue** tab.
 
@@ -85,4 +94,4 @@ _______________
         * *Rectangle (all off)* allows for a rectangle to be drawn on screen and turns all tixels contained in the region off.
 
 
-#. Once confident that the coloring of the tixels are accurate, meaning the tixels covering tissue are red, and the tixels not over tissue are clear, select **Create Spatial Folder** at the bottom of the screen.
+#. Once confident that the coloring of the tixels are accurate, meaning the tixels covering tissue are red, and the tixels not over tissue are clear, select **Create the Spatial Folder** at the bottom of the side toolbar. Scroll the toolbar if needed to reach it.

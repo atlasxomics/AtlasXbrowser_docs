@@ -37,6 +37,41 @@ Once the image has been processed using AtlasXbrowser, the relevant information 
 
         * The X-Coordinate of the tixel.
 
+.. _saved-tixel-geometry:
+
+Saved Tixel Geometry
+####################
+
+Creating a spatial folder or choosing **Update the Spatial folder** saves the
+selected geometry in ``metadata.json``. For example, the 10 µm preset is stored as:
+
+.. code-block:: json
+
+   {
+     "chip_resolution": "10um",
+     "tixel_geometry": {
+       "width_um": 10,
+       "gap_um": 15
+     }
+   }
+
+These fields are part of the full metadata file, alongside the run, ROI and
+threshold settings. ``chip_resolution`` identifies the selected tixel size;
+``width_um`` and ``gap_um`` store the actual dimensions, including overrides.
+The pitch is their sum.
+
+When reopening a spatial folder, AtlasXbrowser restores its saved geometry.
+If ``tixel_geometry`` is absent, it uses the preset for ``chip_resolution``.
+If both geometry fields are absent, older folders use the **25 µm capture width
+and 25 µm gap** fallback to retain the original relative grid geometry. This
+legacy fallback differs from the **10 µm** default for new sessions.
+
+Grid drawing, exported tixel centers and automatic tissue classification use
+the selected capture width and gap. The spot and fiducial diameters in
+``scalefactors_json.json`` are calculated from the geometry and ROI and are
+refreshed when the spatial folder is updated. Display zoom does not change
+these saved coordinates or scale factors.
+
 Loading Spatial Folder
 ######################
 
@@ -55,8 +90,9 @@ To visualize both the number of UMIs and the number of raw counts within a tixel
     .. image:: /images/OpeningSpatialFolder.png
 
 2.) The threshold image, along with the tixel grid, and accompanying tixel states will be loaded into the Browser.
-From here, navigatw to under the **Visualization** tab, the user has three options to choose what they want the browser
-to display.
+The **Zoom** slider is available at the top of the side toolbar; see
+:ref:`zoom-and-toolbar`. Scroll the toolbar if needed to reach **Visualization**
+and choose one of the three display options below.
 
     * **Tixel:** This view is identical to the manual tixel delineation step during image processing, with the states of these tixels taken directly from what was saved during image processing.
 
@@ -68,6 +104,6 @@ to display.
     This is most useful when originally a tixel was said to be on tissue, however then upon loading in the tissue_positions_list_log_UMI_Genes.csv file,
     there were no or minimal reads mapped to that tixel.
 
-
-
-
+After editing the on/off-tissue assignments, click **Update the Spatial folder**
+to save the revised positions, tissue assignments, geometry metadata and scale
+factors.

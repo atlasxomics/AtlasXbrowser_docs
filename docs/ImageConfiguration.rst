@@ -3,6 +3,31 @@ ___________________
 
 Now that the images are loaded into the browser, we can begin processing them.
 
+.. _zoom-and-toolbar:
+
+Zoom and Side Toolbar
+#####################
+
+Once an image is loaded, the **Zoom** slider appears at the top of the side
+toolbar, above **Rotation**. It is hidden on the landing screen. Zoom is also
+available when opening an existing spatial folder.
+
+* Move the slider to zoom from **25% to 400%** of the initial display size.
+  The percentage is relative to the image as initially resized for display,
+  rather than to the original image's pixel dimensions.
+* The image, crop box, ROI outline and tixel grid scale together. Crop and ROI
+  dragging, individual tixel selection and rectangle selection work while zoomed.
+* Use the image's horizontal and vertical scrollbars to navigate an enlarged view.
+* Click **Reset** to return to **100%** and move the view back to the top-left.
+
+The side toolbar remains visible independently of the image size and zoom level.
+Use its separate vertical scrollbar to reach controls lower down when the window
+is too short to show them all. Zoom changes the view only: it does not change
+capture dimensions, ROI coordinates or exported tixel positions.
+
+The screenshots below show an earlier toolbar layout. The current toolbar puts
+Zoom at the top and stacks the remaining controls beneath it.
+
 Rotating the Image
 ##################
 The use of different microscopes or different chip orientations results in various orientational changes required of the images. This rotation section of the program allows images to be rotated into their desired orientation.
